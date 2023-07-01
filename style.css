@@ -1,0 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.btn-purple{
+    width: 400px;
+    height: 56px;
+    background: #482D83;
+
+}
