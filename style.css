@@ -3,10 +3,62 @@
     padding: 0;
     box-sizing: border-box;
 }
+.container{
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.font-Sora{
+    font-family: 'Sora', sans-serif;
+}
+.font-Sora p,.input-wh,.checklogin p{
+    font-weight: 400;
+}
+.font-Sora h3{
+    font-weight: 700;
+}
+
+.container span,.btn-purple{
+    font-weight: 600;
+}
+
+.email,.password,p{
+    margin-bottom:4px;
+}
+.email{
+    margin-top: 40px;
+}
+.password{
+    margin-top:24px;
+}
+
+#checklogin{
+    display: flex;
+    justify-content: space-between;
+    margin: 16px 0 10px 0;
+}
+
+.input-wh{
+    min-width: 400px;
+    min-height: 56px;
+    border-radius: 16px;
+    padding-left: 16px;
+
+}
+
+::placeholder{
+    color: #BDBDBD;
+
+}
 
 .btn-purple{
     width: 400px;
     height: 56px;
     background: #482D83;
-
+    color: white;
+    border-radius: 16px;
 }
