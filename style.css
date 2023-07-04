@@ -42,11 +42,12 @@
     margin: 16px 0 10px 0;
 }
 
-.input-wh{
-    min-width: 400px;
-    min-height: 56px;
+.input-wh,.btn-purple{
+    max-width: 400px;
+    height: 56px;
     border-radius: 16px;
     padding-left: 16px;
+    border: 1px solid #E0E0E0;
 
 }
 
@@ -56,9 +57,13 @@
 }
 
 .btn-purple{
-    width: 400px;
-    height: 56px;
     background: #482D83;
     color: white;
-    border-radius: 16px;
+    border: none;
+}
+
+@media (min-width: 400px){
+	.input-wh{
+        width: 400px;
+    }
 }
