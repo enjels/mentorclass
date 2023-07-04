@@ -2,6 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    list-style: none;
+}
+
+.box-content{
+    display: flex;
 }
 
 
@@ -11,8 +16,21 @@
     top: 10px;
 }
 
-.purple{
-    
+.box-purple{
+    width: 274px;
+    background-color: blueviolet;
+    height: 100vh;
+}
+.box-silver{
+    background: #FCFCFC;
+    width: 100%;
+    height: 100vh;
+
+}
+.white{
+    width: 100%;
+    height: 130px;
+    background-color: white;
 }
 .display{
     display: flex;
