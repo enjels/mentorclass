@@ -8,10 +8,33 @@
 p{
     margin-bottom: 0;
 }
+menu{
+    display: flex;
+    flex-direction: column;
+    gap: 46px;
+}
+.btn-nav{
+    margin: 8px;
+    border: none;
+    background: none;
+    color: white;
+    max-width: 255px;
+    height: 56px;
+    border-radius: 8px;
+    text-align: start;
+
+}
+.btn-nav:hover{
+    background: #564696;
+}
+.btn-nav img{
+    margin: 0 17px 0 24px;
+}
+
 .box-content{
     display: flex;
     width: 100%;
-    height: 100vh;
+    height: 100%;
 }
 .box-purple{
     width: 274px;
@@ -20,7 +43,7 @@ p{
 }
 .box-silver{
     background: #FCFCFC;
-    width: 100%;       
+    width: 100%;
     height: 100vh;
 }
 
@@ -42,7 +65,7 @@ p{
     margin-left: 16px;
 }
 .svg-user{
-    width: 56px;                       
+    width: 56px;
     margin-left:16px;
 }
 .display{
@@ -67,9 +90,10 @@ h4,.main-content{
 }
 
 .input-search{
-    
-    max-width: 400px;
+    width: 400px;
     height: 56px;
+    border-radius: 16px;
+    border: 1.5px solid #E0E0E0;
 }
 
 .btn-green{
