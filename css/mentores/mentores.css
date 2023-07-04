@@ -3,34 +3,47 @@
     padding: 0;
     box-sizing: border-box;
     list-style: none;
-}
 
+}
+p{
+    margin-bottom: 0;
+}
 .box-content{
     display: flex;
 }
-
-
 #voltar{
     position: fixed;
     right: 50%;
     top: 10px;
 }
-
 .box-purple{
     width: 274px;
-    background-color: blueviolet;
+    background: #482D83;
     height: 100vh;
 }
 .box-silver{
     background: #FCFCFC;
-    width: 100%;
+    width: 100%;       
     height: 100vh;
-
 }
 .white{
+    display:flex;
+    justify-content: end;
     width: 100%;
     height: 130px;
-    background-color: white;
+    background-color: rgb(182, 173, 173);
+}
+.sub-white{
+    align-items: center;
+    display: flex;
+    padding: 37px 32px;
+}
+.sub-white .p-user{
+    margin-left: 16px;
+}
+.svg-user{
+    width: 56px;
+    margin-left:16px;
 }
 .display{
     display: flex;
