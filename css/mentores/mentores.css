@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+#voltar{
+    position: fixed;
+    right: 50%;
+    top: 10px;
+}
+
+.purple{
+    
+}
+.display{
+    display: flex;
+    height: 100vh;
+}
