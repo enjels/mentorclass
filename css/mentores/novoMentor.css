@@ -1,19 +1,21 @@
-*{
+*,p{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     list-style: none;
 
 }
-p{
-    margin-bottom: 0;
+.box-content{
+    font-family: 'Poppins', sans-serif;
+    
+
 }
+
 menu{
     display: flex;
     flex-direction: column;
-    /* gap: px; */
 }
-.btn-nav{
+.btn-menu{
     margin: 8px;
     border: none;
     background: none;
@@ -22,12 +24,11 @@ menu{
     height: 56px;
     border-radius: 8px;
     text-align: start;
-
 }
-.btn-nav:hover{
+.btn-menu:hover{
     background: #564696;
 }
-.btn-nav img{
+.btn-menu img{
     margin: 0 17px 0 24px;
 }
 
@@ -40,6 +41,9 @@ menu{
     width: 274px;
     background: #482D83;
     height: 100vh;
+}
+.logo{
+    margin: 32px;
 }
 .box-silver{
     background: #FCFCFC;
@@ -68,10 +72,19 @@ menu{
     width: 56px;
     margin-left:16px;
 }
-.display{
-    display: flex;
-    height: 100vh;
+h4,.p-user :nth-child(1),.btn-green{
+    font-weight: 600;
 }
+h4,.p-user :nth-child(1){
+    font-family: 'Sora', sans-serif;
+}
+.p-user :nth-child(1){
+    font-size: 20px;
+}
+h4{
+    font-size: 32px;
+}
+
 h4,.main-content{
     margin: 32px;
 }
@@ -85,8 +98,7 @@ h4,.main-content{
 #formulario {
     display: flex;
     justify-content: space-between;
-    margin: 20px 20px 20px 32px; 
-    align-items: center;
+    margin: 20px 20px 20px 32px;
 }
 
 .input-search{
@@ -94,6 +106,7 @@ h4,.main-content{
     height: 56px;
     border-radius: 16px;
     border: 1.5px solid #E0E0E0;
+    padding-left: 16px;
 }
 
 .btn-green{
@@ -104,12 +117,9 @@ h4,.main-content{
     border: none;
     color: white;
 }
-
-
-
-
-
-
+.btn-green img{
+    margin-right: 16px;
+}
 
 
 
@@ -117,6 +127,6 @@ h4,.main-content{
 /* botão de voltar temporario */
 #voltar{
     position: fixed;
-    right: 50%;
+    right: 50%;    
     top: 10px;
 }
