@@ -60,6 +60,12 @@
     background: #482D83;
     color: white;
     border: none;
+    transition: 0.5s;
+}
+
+.btn-purple:hover{
+    background: #564696;
+    transition: 0.5s;
 }
 
 @media (min-width: 400px){
