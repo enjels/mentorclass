@@ -123,6 +123,7 @@ h4{
     transition: 0.5s;
 }
 .btn-voltar:hover{
+    cursor: pointer;
     background-color: #c2c0c0;
     transition: 0.5s;
 }

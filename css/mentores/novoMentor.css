@@ -28,6 +28,7 @@ menu{
 .btn-menu:hover{
     background: #564696;
     transition: 0.5s;
+    cursor: pointer;
 }
 .btn-menu img{
     margin: 0 17px 0 24px;
@@ -123,6 +124,7 @@ h4{
     transition: 0.5s;
 }
 .btn-voltar:hover{
+    cursor: pointer;
     background-color: #c2c0c0;
     transition: 0.5s;
 }
@@ -167,6 +169,7 @@ form :nth-child(2){
 .btn-purple:hover{
     background-color: #564696;
     transition: 0.5s;
+    cursor: pointer;
 }
 /* formu :nth-child(1){
     text-align: center;

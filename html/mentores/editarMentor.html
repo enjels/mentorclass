@@ -18,66 +18,68 @@
 
 <body>
     
-    <div class="box-content">
-
-        <div class="box-purple">
-            <img class="logo" src="../../svg/logo.svg" alt="">
-            <menu>
-                <button onclick="voltar()" class="btn-menu">
-                    <img src="../../svg/mentores.svg" alt="">
-                    Mentores
-                </button>
-                <button class="btn-menu">
-                    <img src="../../svg/mentorIA.svg" alt="">
-                    Mentoria
-                </button>
-                <button class="btn-menu">
-                    <img src="../../svg/turmas.svg" alt="">
-                    Turmas
-                </button>
-                <button class="btn-menu">
-                    <img src="../../svg/alunos.svg" alt="">
-                    Alunos
-                </button>
-            </menu>
-        </div>
-
-        <div class="box-silver">
-            <header class="white">
-                <div class="sub-white">
-                    <img class="svg-user" src="../../svg/user.svg" alt="">
-                    <div class="p-user">
-                        <p>Usuário</p>
-                        <p>desenvolvedor@gmail.com</p>
-                    </div>
-                </div>
-            </header>
-            <div id="voltar" class="BT-H4 dflex">
-                <button class="btn-voltar" onclick="voltar()"><img src="../../svg/voltar.svg" alt=""></button>
-                <div><h4>Mentor</h4></div>
+    <body>
+    
+        <div class="box-content">
+    
+            <div class="box-purple">
+                <img class="logo" src="../../svg/logo.svg" alt="">
+                <menu>
+                    <button onclick="voltar()" class="btn-menu">
+                        <img src="../../svg/mentores.svg" alt="">
+                        Mentores
+                    </button>
+                    <button class="btn-menu">
+                        <img src="../../svg/mentorIA.svg" alt="">
+                        Mentoria
+                    </button>
+                    <button class="btn-menu">
+                        <img src="../../svg/turmas.svg" alt="">
+                        Turmas
+                    </button>
+                    <button class="btn-menu">
+                        <img src="../../svg/alunos.svg" alt="">
+                        Alunos
+                    </button>
+                </menu>
             </div>
-            <div>
-                <main class="main-content">
-                    <p>Dados</p>
-                    <form id="formulario" action="">
-                        <div class=" form-container dflex">
-                            <div class="direction-col">
-                                <label for="text">Name</label>
-                                <input type="text" name="text" id="text">
-                            </div>
-                            <div class="direction-col">
-                                <label for="email">E-mail</label>
-                                <input type="email" name="email" id="email">
-                            </div>
+    
+            <div class="box-silver">
+                <header class="white">
+                    <div class="sub-white">
+                        <img class="svg-user" src="../../svg/user.svg" alt="">
+                        <div class="p-user">
+                            <p>Usuário</p>
+                            <p>desenvolvedor@gmail.com</p>
                         </div>
-                        <button onclick="novoMentor()" class="btn-purple"  type="submit">
-                            Salvar
-                        </button>
-                    </form>
-                </main>
+                    </div>
+                </header>
+                <div id="voltar" class="BT-H4 dflex">
+                    <button class="btn-voltar" onclick="voltar()"><img src="../../svg/voltar.svg" alt=""></button>
+                    <div><h4>mentor</h4></div>
+                </div>
+                <div>
+                    <main class="main-content">
+                        <p>Dados</p>
+                        <form id="formulario" action="">
+                            <div class=" form-container dflex">
+                                <div class="direction-col">
+                                    <label for="text">Name</label>
+                                    <input type="text" name="text" id="text">
+                                </div>
+                                <div class="direction-col">
+                                    <label for="email">E-mail</label>
+                                    <input type="email" name="email" id="email">
+                                </div>
+                            </div>
+                            <button onclick="novoMentor()" class="btn-purple"  type="submit">
+                                Salvar
+                            </button>
+                        </form>
+                    </main>
+                </div>
             </div>
         </div>
-    </div>
-</body>
+    </body>
 
 </html>
