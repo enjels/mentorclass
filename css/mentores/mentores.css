@@ -103,16 +103,31 @@ h4,.main-content{
 #formulario {
     display: flex;
     justify-content: space-between;
-    /* padding: 20px 20px 32px 20px; */
+    margin-bottom: 32px;
 }
+
 
 .input-search{
     width: 400px;
     height: 56px;
     border-radius: 16px;
-    border: 1.5px solid #E0E0E0;
+    border: none ;
     padding-left: 16px;
+    border: 1.5px solid #E0E0E0;
+    border-radius: 16px;
+
 }
+
+.search-lupa img{
+    position: absolute;
+    top: 270px;
+    left: 680px;
+}
+
+.search-lupa img:hover{
+    cursor: pointer;
+}
+
 
 .btn-green{
     background: #00C247;
@@ -128,20 +143,45 @@ h4,.main-content{
 
 .dflex{
     display: flex;
-    justify-content: space-between;
 }
+.width100{
+    width: 100%;
+}
+
+.center-text{
+    text-align: center;
+}
+
+.border-radius-purple-left{
+    border-radius: 16px 0px 0px 0px;
+}
+.border-radius-purple-reght{
+    border-radius: 0px 16px 0px 0px;
+}
+
 .info-purple{
     color: white;
     background:#482D83;
+    height: 72px;
+    padding: 24px 40px;
+    max-width: 100%;
 }
-.box-info{
-    /* padding: 0px 24px 50px 24px; */
+.info-white{
+    background: rgba(250, 250, 250, 1);
+    height: 80px;
+    padding: 28px 40px;
+    align-items: center ;
+    margin: 8px 0;
+}
+.info-white :nth-child(1){
+    margin-right: 10px;
+
 }
 
 
 /* botão de voltar temporario */
 #voltar{
     position: fixed;
-    right: 50%;    
+    right: 50%;
     top: 10px;
 }
