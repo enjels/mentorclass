@@ -85,4 +85,5 @@ form img{
 .btn-purple:hover{
     background: #564696;
     transition: 0.5s;
+    cursor: pointer;
 }
