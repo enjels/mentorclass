@@ -15,6 +15,7 @@ menu{
     flex-direction: column;
 }
 .btn-menu{
+    font-size: 16px;
     margin: 8px;
     border: none;
     background: none;
@@ -23,12 +24,12 @@ menu{
     height: 56px;
     border-radius: 8px;
     text-align: start;
-    transition: 0.5s;
+    align-items: center;
 }
 .btn-menu:hover{
-    background: #564696;
-    transition: 0.5s;
     cursor: pointer;
+    font-weight: 600;
+    background: #564696;
 }
 .btn-menu img{
     margin: 0 17px 0 24px;
@@ -99,6 +100,7 @@ h4{
     display:flex;
     flex-direction: column;
 }
+
 input{
     padding-left: 16px;
 }
@@ -172,7 +174,6 @@ form :nth-child(2){
 .btn-purple:hover{
     background-color: #564696;
     transition: 0.5s;
-    cursor: pointer;
 }
 /* formu :nth-child(1){
     text-align: center;

@@ -5,9 +5,9 @@
     list-style: none;
 
 }
+
 .box-content{
     font-family: 'Poppins', sans-serif;
-
 }
 
 menu{
@@ -15,6 +15,7 @@ menu{
     flex-direction: column;
 }
 .btn-menu{
+    font-size: 16px;
     margin: 8px;
     border: none;
     background: none;
@@ -23,11 +24,12 @@ menu{
     height: 56px;
     border-radius: 8px;
     text-align: start;
-    transition: 0.5s;
+    align-items: center;
 }
 .btn-menu:hover{
+    cursor: pointer;
+    font-weight: 600;
     background: #564696;
-    transition: 0.5s;
 }
 .btn-menu img{
     margin: 0 17px 0 24px;
@@ -129,6 +131,7 @@ h4,.main-content{
 } 
 
 .btn-green{
+    font-size: 16px;
     background: #00C247;
     width:271px;
     height:56px;
@@ -136,8 +139,12 @@ h4,.main-content{
     border: none;
     color: white;
     transition: 0.5s;
+    align-self: center;
+    align-items: center;
+    padding-left: 65px;
 }
 .btn-green:hover{
+    cursor: pointer;
     transform: 500s;
     background: #01a13c;
     transition: 0.5s;
