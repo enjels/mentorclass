@@ -1,4 +1,5 @@
 let mentoresId = null
+
 //recupera o ID do mentor que foi enviado no parametro da URL
 const getIdUrl = () => {
     const parameString = window.location.search
@@ -8,6 +9,7 @@ const getIdUrl = () => {
     // ou seja, ao utulizar o .get eu posso recuperar um determinado campo
     mentoresId = parameters.get('Id')
 }
+
 // recuperar mentor
 const buscarMentores = async () => {
     const retorno = await fetch(`http://localhost:3000/mentores/${mentoresId}`)
@@ -16,33 +18,41 @@ const buscarMentores = async () => {
 }
 
 const editarMentores = async (mentores) => {
-    await fetch(`http://localhost:3000/noticias/${nmentoresId}`, {
+
+    await fetch(`http://localhost:3000/mentores/${mentoresId}`, {
         method: 'PUT',
         headers: {
             'Accept': 'application/json, text/plain, */*',
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(mentores)
+
     })
     // Redireciono o usuario para a tela de listagem
     window.location = "/html/mentores/mentores.html"
+
 }
+
 const carregarDadosFormulario = async (mentores) => {
     document.getElementById('nome').value = mentores.nome
     document.getElementById('email').value = mentores.email
+
 }
 
+// Envia os dados para o api jason server
 const  formulario = document.getElementById('formulario')
 formulario.addEventListener('submit', (event) => {
     event.preventDefault()
     const nome = document.getElementById('nome').value
     const email = document.getElementById('email').value
 
-    const mentores ={
+    const mentores = {
         nome,
         email
+
     }
     editarMentores(mentores)
+
 })
 
 // Ao entrar na página, a funcão carregarDados é chamada
@@ -55,6 +65,8 @@ const carregarDados = async () => {
     carregarDadosFormulario(mentores)
 
 }
+
+// inicia a aplicação
 carregarDados()
 
 //retorna a pag mentores
