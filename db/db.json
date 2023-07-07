@@ -1,14 +1,9 @@
 {
   "mentores": [
     {
-      "nome": "virgílio",
-      "email": "desenvolvedor199759@gmail.com",
-      "id": 1
-    },
-    {
-      "nome": "afrodite",
-      "email": "afrodite@gmail.com",
-      "id": 2
+      "nome": "luiz da cabeça de bulacha",
+      "email": "luiz@gmail.com",
+      "id": 3
     }
   ]
 }
