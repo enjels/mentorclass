@@ -2,31 +2,30 @@
 <html lang="pt-br">
 
 <head>
-    <title>Mentores</title>
+    <title>Mentorias</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Sora:wght@400;600&display=swap"rel="stylesheet">
-    
-    <script defer src="../../js/mentores/mentores.js"></script>
-    <link rel="stylesheet" href="../../css/mentores/mentores.css">
 
+    <script defer src="../../js/mentorias/mentorias.js"></script>
+    <link rel="stylesheet" href="../../css/mentorias/mentorias.css">
 </head>
 
 <body>
-    <button id="voltar" onclick="voltar()">voltar</button>
+    <button id="voltar" >voltar</button>
     <div class="box-content">
 
         <div class="box-purple">
             <img class="logo" src="../../svg/logo.svg" alt="">
             <menu>
-                <button class="btn-menu dflex">
+                <button onclick="mentores()" class="btn-menu dflex">
                     <img src="../../svg/mentores.svg" alt="">
                     Mentores
                 </button>
-                <button onclick="mentorias()" class="btn-menu dflex">
+                <button class="btn-menu dflex">
                     <img src="../../svg/mentorIA.svg" alt="">
                     Mentorias
                 </button>
@@ -52,7 +51,7 @@
                 </div>
             </header>
 
-            <h4>Mentores</h4>
+            <h4>Mentorias</h4>
 
             <div>
                 <main class="main-content">
@@ -85,30 +84,9 @@
                             <div class="center-text">
                                 <p class="info-purple border-radius-purple-reght">Ações</p>
                                 <div id="info-content3">
-                                    <!-- <div class="info-white dflex ">
-                                        <img onclick="editarMentor()" src="../../svg/editar.svg" alt="">
-                                        <img src="../../svg/delete.svg" alt="">
-                                    </div> -->
                                 </div>
                             </div>
                         </div>
-                        <!-- <div class="dflex">
-                            <div class="width100">
-                                <p class="info-purple border-radius-purple-left">Nome</p>
-                                <p class="info-white">Juliana Amaral</p>
-                            </div>
-                            <div class=" width100">
-                                <p class="info-purple">E-mail</p>
-                                <p class="info-white">Juliana@gmaiil.com</p>
-                            </div>
-                            <div class="center-text">
-                                <p class="info-purple border-radius-purple-reght">Ações</p>
-                                <div class="info-white dflex ">
-                                    <img onclick="editarMentor()" src="../../svg/editar.svg" alt="">
-                                    <img src="../../svg/delete.svg" alt="">
-                                </div>
-                            </div>
-                        </div> -->
                     </div>
                 </main>
             </div>
