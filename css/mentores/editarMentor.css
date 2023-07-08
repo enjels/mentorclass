@@ -5,9 +5,8 @@
     list-style: none;
 
 }
-.box-content{
+.box-content,button,input{
     font-family: 'Poppins', sans-serif;
-
 }
 
 menu{
@@ -78,7 +77,7 @@ menu{
 h4,.p-user :nth-child(1),.btn-green,.btn-purple,main p{
     font-weight: 600;
 }
-h4,.p-user :nth-child(1){
+h4,main p,.p-user :nth-child(1){
     font-family: 'Sora', sans-serif;
 }
 .p-user :nth-child(1){
@@ -103,6 +102,7 @@ h4{
 
 input{
     padding-left: 16px;
+    font-size: 16px;
 }
 .BT-H4{
     margin: 22px 30px;
@@ -133,6 +133,9 @@ input{
     background-color: #c2c0c0;
     transition: 0.5s;
 }
+.btn-voltar img{
+    padding-top: 5px;
+}
 
 main p{
     margin-left: 20px;
@@ -161,6 +164,7 @@ form :nth-child(2){
     margin-left: 16px;
 }
 .btn-purple{
+    font-size: 16px;
     width: 400px;
     height: 48px;
     border-radius: 16px;

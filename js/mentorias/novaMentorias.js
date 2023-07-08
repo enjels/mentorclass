@@ -16,7 +16,6 @@ event.preventDefault()
 
     const nome = formulario.elements['nome'].value
     const email = formulario.elements['email'].value
-    const titulo = ''
     console.log(email)
     const mentores = {
             nome,
@@ -30,5 +29,5 @@ event.preventDefault()
 
 //retorna a pag mentores
 const voltar = () => {
-    window.location = "/html/mentores/mentores.html"
+    window.location = "/html/mentorias/mentorias.html"
 }

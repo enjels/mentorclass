@@ -6,7 +6,7 @@
 
 }
 
-.box-content{
+.box-content,button,input{
     font-family: 'Poppins', sans-serif;
 }
 
@@ -78,7 +78,7 @@ menu{
 h4,.p-user :nth-child(1),.btn-green{
     font-weight: 600;
 }
-h4,.p-user :nth-child(1){
+h4,.btn-green,.p-user :nth-child(1){
     font-family: 'Sora', sans-serif;
 }
 .p-user :nth-child(1){
@@ -111,6 +111,7 @@ h4,.main-content{
 
 
 .input-search{
+    font-size: 16px;
     width: 400px;
     height: 56px;
     border-radius: 16px;
@@ -141,11 +142,10 @@ h4,.main-content{
     transition: 0.5s;
     align-self: center;
     align-items: center;
-    padding-left: 65px;
+    padding-left: 55px;
 }
 .btn-green:hover{
     cursor: pointer;
-    transform: 500s;
     background: #01a13c;
     transition: 0.5s;
 }
