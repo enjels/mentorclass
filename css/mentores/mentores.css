@@ -179,7 +179,7 @@ h4,.main-content{
     max-width: 100%;
 }
 .info-white{
-    background: rgba(250, 250, 250, 1);
+    /* background: #fafafa; */
     height: 80px;
     padding: 28px 40px;
     align-items: center ;
@@ -199,4 +199,11 @@ h4,.main-content{
     position: fixed;
     right: 50%;
     top: 10px;
+}
+
+.cinza100{
+    background-color: #F5F5F5;
+}
+.cinza50{
+    background-color: #FAFAFA;
 }
