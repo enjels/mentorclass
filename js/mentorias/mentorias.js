@@ -1,12 +1,12 @@
 
 //função para exibir conteudo na tela formatado
-const rendermentor = (mentores) =>{
+const rendermentor = (titulomentorias) =>{
     const info_content_1 = document.getElementById('info-content1')
     const info_content_2 = document.getElementById('info-content2')
     const info_content_3 = document.getElementById('info-content3')
     
     let contador = 1
-    mentores.forEach(mentor => {
+    titulomentorias.forEach(titulomentorias => {
         contador++;
         let corlist = '';
         if (contador % 2 === 0) {
@@ -16,26 +16,26 @@ const rendermentor = (mentores) =>{
         }
     
         info_content_1.innerHTML += `
-          <p class="info-white ${corlist}">${mentor.nome}</p>
+          <p class="info-white ${corlist}">${titulomentorias.nome}</p>
         `;
         info_content_2.innerHTML += `
-          <p class="info-white ${corlist}">${mentor.email}</p>
+          <p class="info-white ${corlist}">${titulomentorias.nome}</p>
         `;
-        info_content_3.innerHTML += `
-          <div class="info-white dflex ${corlist}">
-            <img onclick="editarMentor(${mentor.id})" src="../../svg/editar.svg" alt="">
-            <img onclick="deletarMentor(${mentor.id})" src="../../svg/delete.svg" alt="">
-          </div>
-        `;
+        // info_content_3.innerHTML += `
+        //   <div class="info-white dflex ${corlist}">
+        //     <img onclick="editarMentor(${mentor.id})" src="../../svg/editar.svg" alt="">
+        //     <img onclick="deletarMentor(${mentor.id})" src="../../svg/delete.svg" alt="">
+        //   </div>
+        // `;
       });
     }
     
      //recebe os dados da api
     const getmentores = async () => {
-        const retorno = await fetch ('http://localhost:3000/mentores')
-        const mentores = await retorno.json()
+        const retorno = await fetch ('http://localhost:3000/titulomentorias')
+        const titulomentorias = await retorno.json()
 
-        rendermentor(mentores)
+        rendermentor(titulomentorias)
     }
 
 

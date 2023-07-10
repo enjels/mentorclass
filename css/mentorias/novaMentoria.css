@@ -150,7 +150,7 @@ form{
     margin-top: 32px;
 }
 
-form input{
+form input,.tdm{
     width: 400px;
     height: 56px;
     border-radius: 16px;

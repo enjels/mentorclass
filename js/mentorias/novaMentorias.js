@@ -1,38 +1,30 @@
-const novomentor = async (mentores) => {
-    await fetch('http://localhost:3000/mentores',{
+const novametoria = async (titulomentorias) => {
+    await fetch('http://localhost:3000/titulomentorias',{
         method: 'POST',
         headers: {
             "Accept": 'application/json, text/plain, */*',
             "Content-Type": 'application/json'
         },
-        body: JSON.stringify(mentores)
+        body: JSON.stringify(titulomentorias)
     })
-   window.location = "/html/mentores/mentores.html"
+    window.location = "./mentorias.html"
 }
 
 const formulario = document.getElementById('formulario')
-formulario.addEventListener('submit', async (event) => {
+formulario.addEventListener('submit',(event) => {
 event.preventDefault()
 
     const nome = formulario.elements['nome'].value
-    const email = formulario.elements['email'].value
-    console.log(email)
-    const mentores = {
-            nome,
-            email,
-            titulo
+    console.log(nome)
+    const titulomentorias = {
+            nome
     }
 
-    novomentor(mentores)
+    novametoria(titulomentorias)
 
 })
 
-// //retorna a pag mentores
-// const voltar = () => {
-//     window.location = "/html/mentorias/mentorias.html"
-// }
-
-//funções menu/nagar
+//funções menu/navegar
 const mentores = () => {
     window.location = "../mentores/mentores.html"
   }
@@ -51,4 +43,4 @@ const mentores = () => {
   //vai apra pagina nova mentoria
   const novaMentoria = () => {
      window.location = "/html/mentorias/novaMentoria.html"
-  }             
+  }
