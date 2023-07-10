@@ -76,7 +76,23 @@ const carregarDados = async () => {
 // inicia a aplicação
 carregarDados()
 
-//retorna a pag mentores
-const voltar = () => {
-    window.location = "/html/mentores/mentores.html"
-}
+//funções menu/nagar
+const mentores = () => {
+    window.location = "./mentores.html"
+  }
+  //vai para pagina mentoias
+  const mentorias = () => {
+     window.location = "../mentorias/mentorias.html"
+   }
+  //vai para pagina turmas
+  const turmas = () => {
+     window.location = "/html/turmas/turmas.html"
+  }
+  //vai para pagina alunos
+  const alunos = () => {
+     window.location = "/html/alunos/alunos.html"
+  }
+  //vai apra pagina nova mentoria
+  const novaMentoria = () => {
+     window.location = "/html/mentorias/novaMentoria.html"
+  }
