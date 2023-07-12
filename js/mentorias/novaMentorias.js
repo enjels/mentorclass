@@ -12,7 +12,7 @@ const buscarMentores = async ()=> {
     return mentores
 }
 
-const carregarSelector = async ()=> {
+const carregarSelect = async ()=> {
     const mentores = await buscarMentores()
     const mentorSelect = document.getElementById('mentor')
 
@@ -24,7 +24,7 @@ const carregarSelector = async ()=> {
     mentorSelect.options.add(opcao)
     });
 }
-carregarSelector()
+carregarSelect()
 const novaMetoria = async (titulomentorias) => {
     await fetch('http://localhost:3000/titulomentorias',{
         method: 'POST',
