@@ -16,12 +16,10 @@ event.preventDefault()
 
     const nome = formulario.elements['nome'].value
     const email = formulario.elements['email'].value
-    const titulo = ''
     console.log(email)
     const mentores = {
             nome,
             email,
-            titulo
     }
 
     novomentor(mentores)

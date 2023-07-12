@@ -6,7 +6,7 @@ const info_content_2 = document.getElementById('info-content2')
 const info_content_3 = document.getElementById('info-content3')
 
 let contador = 1
-mentores.forEach(mentor => {
+mentores.forEach(mentores => {
     contador++;
     let corlist = '';
     if (contador % 2 === 0) {
@@ -16,15 +16,15 @@ mentores.forEach(mentor => {
     }
 
     info_content_1.innerHTML += `
-      <p class="info-white ${corlist}">${mentor.nome}</p>
+      <p class="info-white ${corlist}">${mentores.nome}</p>
     `;
     info_content_2.innerHTML += `
-      <p class="info-white ${corlist}">${mentor.email}</p>
+      <p class="info-white ${corlist}">${mentores.email}</p>
     `;
     info_content_3.innerHTML += `
       <div class="info-white dflex ${corlist}">
-        <img onclick="editarMentor(${mentor.id})" src="../../svg/editar.svg" alt="">
-        <img onclick="deletarMentor(${mentor.id})" src="../../svg/delete.svg" alt="">
+        <img onclick="editarMentor(${mentores.id})" src="../../svg/editar.svg" alt="">
+        <img onclick="deletarMentor(${mentores.id})" src="../../svg/delete.svg" alt="">
       </div>
     `;
   });

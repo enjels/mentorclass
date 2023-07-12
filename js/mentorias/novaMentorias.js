@@ -1,4 +1,31 @@
-const novametoria = async (titulomentorias) => {
+const formulario = document.getElementById('formulario')
+
+const buscarMentorias = async (id)=> {
+    const resposta = await fetch(`http://localhost:3000/mentores/${id}`)
+    const mentor = await resposta.json()
+    return mentor
+}
+
+const buscarMentores = async ()=> {
+    const resposta = await fetch(`http://localhost:3000/mentores`)
+    const mentores = await resposta.json()
+    return mentores
+}
+
+const carregarSelector = async ()=> {
+    const mentores = await buscarMentores()
+    const mentorSelect = document.getElementById('mentor')
+
+    const opcaoVazia = new Option('Selecione um mentor...')
+    mentorSelect.options.add(opcaoVazia)
+
+    mentores.forEach(mentor => {
+    const opcao = new Option(mentor.nome, mentor.id)
+    mentorSelect.options.add(opcao)
+    });
+}
+carregarSelector()
+const novaMetoria = async (titulomentorias) => {
     await fetch('http://localhost:3000/titulomentorias',{
         method: 'POST',
         headers: {
@@ -10,19 +37,22 @@ const novametoria = async (titulomentorias) => {
     window.location = "./mentorias.html"
 }
 
-const formulario = document.getElementById('formulario')
-formulario.addEventListener('submit',(event) => {
+formulario.addEventListener('submit', async(event) => {
 event.preventDefault()
 
-    const nome = formulario.elements['nome'].value
-    console.log(nome)
+    const tipo = formulario.elements['nome'].value
+    const mentor = formulario.elements['mentor'].value
+
+    const mentorObjeto = await buscarMentorias(mentor)
     const titulomentorias = {
-            nome
+            tipo,
+            nome: mentorObjeto.nome
     }
 
-    novametoria(titulomentorias)
+    novaMetoria(titulomentorias)
 
 })
+
 
 //funções menu/navegar
 const mentores = () => {

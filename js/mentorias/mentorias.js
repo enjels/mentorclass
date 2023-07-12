@@ -16,20 +16,20 @@ const rendermentor = (titulomentorias) =>{
         }
     
         info_content_1.innerHTML += `
-          <p class="info-white ${corlist}">${titulomentorias.nome}</p>
+          <p class="info-white ${corlist}">${titulomentorias.tipo}</p>
         `;
         info_content_2.innerHTML += `
           <p class="info-white ${corlist}">${titulomentorias.nome}</p>
         `;
-        // info_content_3.innerHTML += `
-        //   <div class="info-white dflex ${corlist}">
-        //     <img onclick="editarMentor(${mentor.id})" src="../../svg/editar.svg" alt="">
-        //     <img onclick="deletarMentor(${mentor.id})" src="../../svg/delete.svg" alt="">
-        //   </div>
-        // `;
+        info_content_3.innerHTML += `
+          <div class="info-white dflex ${corlist}">
+            <img onclick="editarMentoria(${titulomentorias.id})" src="../../svg/editar.svg" alt="">
+            <img onclick="deletarMentoria(${titulomentorias.id})" src="../../svg/delete.svg" alt="">
+          </div>
+        `;
       });
     }
-    
+
      //recebe os dados da api
     const getmentores = async () => {
         const retorno = await fetch ('http://localhost:3000/titulomentorias')
@@ -45,15 +45,15 @@ const rendermentor = (titulomentorias) =>{
     }
     //vai a pag editarMentor
     const editarMentoria = (id)=> {
-        window.location = `/html/mentores/editarmentor.html?id=${id}`
+        window.location = `/html/mentorias/editarMentoria.html?id=${id}`
     }
-    
+
     const deletarMentoria = async (id) => {
-       await  fetch(`http://localhost:3000/mentores/${id}`, {
+       await  fetch(`http://localhost:3000/titulomentorias/${id}`, {
             method: 'DELETE'
         })
     }
-    
+
     getmentores()
 
 //funções do menu
