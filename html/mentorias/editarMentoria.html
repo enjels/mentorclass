@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Sora:wght@400;600&display=swap" rel="stylesheet">
 
     <script defer src="../../js/mentorias/editarMentoria.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="../../css/mentorias/editarMentoria.css">
 
 </head>
@@ -30,7 +31,7 @@
                     <img src="../../svg/mentorIA.svg" alt="">
                     Mentorias
                 </button>
-                <button class="btn-menu dflex">
+                <button onclick="turmas()" class="btn-menu dflex">
                     <img src="../../svg/turmas.svg" alt="">
                     Turmas
                 </button>
@@ -57,22 +58,33 @@
             </div>
             <div>
                 <main class="main-content">
-                    <p>Dados</p>
                     <form id="formulario" action="">
+                        <p class="leterpurple">Dados</p>
+
                         <div class=" form-container dflex">
                             <div class="direction-col">
-                                <label for="nome">Título da mentoria</label>
+                                <label class="label" for="nome">Título da mentoria</label>
                                 <input type="text" name="nome" id="nome">
                             </div>
                             <div class="direction-col">
-                                <label for="email">Mentor</label>
+                                <label class="label" for="email">Mentor</label>
                                 <select name="mentor" id="mentor" class="tdm">
                                 </select>
                             </div>
                         </div>
-                        <button class="btn-purple"  type="submit">
-                            Salvar
-                        </button>
+                        <div class="boxcheck">
+                            <p class="label">status</p>
+                            <div class="dflex">
+                                <input type="checkbox" id="chk" />
+                                <label for="chk" class="switch">
+                                <span class="slider"></span>
+                                </label>
+                                <p>Ativo</p>
+                            </div>
+                              <button class="btn-purple"  type="submit">
+                                Salvar
+                            </button>
+                        </div>
                     </form>
                 </main>
             </div>

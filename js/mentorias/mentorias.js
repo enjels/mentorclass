@@ -30,12 +30,20 @@ const rendermentor = (titulomentorias) =>{
       });
     }
 
+    const btnPurpleMenu = () => {
+      const purpleBTN =document.getElementById('mentorias')
+        purpleBTN.classList.toggle("btnstatic-purple")
+    }
+
+
      //recebe os dados da api
     const getmentores = async () => {
-        const retorno = await fetch ('http://localhost:3000/titulomentorias')
-        const titulomentorias = await retorno.json()
+
+      const retorno = await fetch ('http://localhost:3000/titulomentorias')
+      const titulomentorias = await retorno.json()
 
         rendermentor(titulomentorias)
+        btnPurpleMenu()
     }
 
 
@@ -55,6 +63,13 @@ const rendermentor = (titulomentorias) =>{
     }
 
     getmentores()
+
+
+    const btnPurple = () => {
+      const purpleBTN =document.getElementById('mentores')
+      purpleBTN.classList.toggle("btnstatic-purple")
+    }
+
 
 //funções do menu
 //vai para pagina mentoias

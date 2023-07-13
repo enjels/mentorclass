@@ -5,7 +5,7 @@
     list-style: none;
 
 }
-.box-content,button{
+.box-content,button,.boxcheck p{
     font-family: 'Poppins', sans-serif;
 
 }
@@ -99,6 +99,7 @@ h4{
 .direction-col{
     display:flex;
     flex-direction: column;
+    margin-right: 24px;
 }
 
 input{
@@ -114,7 +115,7 @@ input{
     max-width:100%;
     max-height: 100vh;
     border-radius: 24px;
-    padding: 20px 20px 32px 20px;
+    padding: 0.1px 0px 0.1px 0px;
     box-shadow: 0px 0px 25px 0px rgba(163, 163, 163, 0.2);
     -webkit-box-shadow: 0px 0px 25px 0px rgba(163, 163, 163, 0.2);;
     -moz-box-shadow: 0px 0px 25px 0px rgba(163, 163, 163, 0.2);
@@ -139,40 +140,37 @@ input{
     padding-top: 5px;
 }
 
-main p{
-    margin-left: 20px;
+main .leterpurple{
     border-bottom: solid 1px #BDBDBD;
     padding-bottom: 17px;
     font-size: 20px;
     color: #482D83;
 }
 form{
-    margin-top: 32px;
+    margin: 32px;
 }
 
-form input{
+form input,.tdm{
     width: 400px;
     height: 56px;
     border-radius: 16px;
     border: 1.5px solid #E0E0E0;
-    border-radius: 16px;
-}
-form label{
-    color: #757575;
-    padding-left: 20px;
 }
 
-form :nth-child(2){
-    margin-left: 16px;
+form .label{
+    color: #757575;
 }
-.btn-purple{
+.form-container{
+    margin: 32px 0px 27px 0px;
+}
+
+form .btn-purple{
     font-size: 16px;
     width: 400px;
     height: 48px;
     border-radius: 16px;
     border: none;
     border-radius: 16px;
-    margin-top: 27px;
     color: white;
     background-color: #482D83;
     transition: 0.5s;
@@ -182,15 +180,9 @@ form :nth-child(2){
     background-color: #564696;
     transition: 0.5s;
 }
-/* formu :nth-child(1){
-    text-align: center;
-} */
+
 @media (max-width: 1222px){
-    form :nth-child(1){
+    form .form-container{
         flex-direction: column;
-        
-    }
-	form :nth-child(2){
-        margin-left: 0px;
     }
 }

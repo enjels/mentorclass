@@ -1,20 +1,20 @@
-*,p,h4{
+*,p{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     list-style: none;
 
 }
-.box-content,button,.boxcheck p{
-    font-family: 'Poppins', sans-serif;
 
+.box-content,button,input{
+    font-family: 'Poppins', sans-serif;
 }
 
 menu{
     display: flex;
     flex-direction: column;
 }
-.btn-menu{
+.btn-menu, .btnstatic{
     font-size: 16px;
     margin: 8px;
     border: none;
@@ -26,12 +26,16 @@ menu{
     text-align: start;
     align-items: center;
 }
+.btnstatic-purple{
+    background: #564696;
+    font-weight: 600;
+}
 .btn-menu:hover{
     cursor: pointer;
     font-weight: 600;
     background: #564696;
 }
-.btn-menu img{
+.btn-menu img, .btnstatic img{
     margin: 0 17px 0 24px;
 }
 
@@ -75,10 +79,10 @@ menu{
     width: 56px;
     margin-left:16px;
 }
-h4,.p-user :nth-child(1),.btn-green,.btn-purple,main p{
+h4,.p-user :nth-child(1),.btn-green{
     font-weight: 600;
 }
-h4,main p,.p-user :nth-child(1){
+h4,.btn-green,.p-user :nth-child(1){
     font-family: 'Sora', sans-serif;
 }
 .p-user :nth-child(1){
@@ -88,101 +92,121 @@ h4{
     font-size: 32px;
 }
 
-.BT-H4,.main-content{
+h4,.main-content{
     margin: 32px;
 }
-
 /* main-content onde vai os dados novos exibidos na tela */
-.dflex{
-    display: flex;
-}
-.direction-col{
-    display:flex;
-    flex-direction: column;
-    margin-right: 24px;
-}
-
-input{
-    font-size: 16px;
-    padding-left: 16px;
-}
-.BT-H4{
-    margin: 22px 30px;
-    align-items: center;
-}
 .main-content{
     background: white;
     max-width:100%;
     max-height: 100vh;
     border-radius: 24px;
-    padding: 0.1px 0px 0.1px 0px;
+    padding: 20px 20px 50px 20px;
     box-shadow: 0px 0px 25px 0px rgba(163, 163, 163, 0.2);
     -webkit-box-shadow: 0px 0px 25px 0px rgba(163, 163, 163, 0.2);;
     -moz-box-shadow: 0px 0px 25px 0px rgba(163, 163, 163, 0.2);
 }
 
-.btn-voltar{
-    background-color: #EEEEEE;
-    border-radius: 100%;
-    border: none;
-    width: 48px;
-    height: 48px;
-    margin-right: 16px;
-    transition: 0.5s;
-    align-items: center;
-}
-.btn-voltar:hover{
-    cursor: pointer;
-    background-color: #c2c0c0;
-    transition: 0.5s;
-}
-.btn-voltar img{
-    padding-top: 5px;
+#formulario {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 32px;
 }
 
-main .leterpurple{
-    border-bottom: solid 1px #BDBDBD;
-    padding-bottom: 17px;
-    font-size: 20px;
-    color: #482D83;
-}
-form{
-    margin: 32px;
-}
 
-form input,.tdm{
+.input-search{
+    font-size: 16px;
     width: 400px;
     height: 56px;
     border-radius: 16px;
+    padding-left: 16px;
     border: 1.5px solid #E0E0E0;
+    border-radius: 16px;
+
 }
 
-form .label{
-    color: #757575;
-}
-.form-container{
-    margin: 32px 0px 27px 0px;
+.search-lupa img{
+    position: absolute;
+    top: 270px;
+    left: 680px;
 }
 
-form .btn-purple{
+.search-lupa img:hover{
+    cursor: pointer;
+} 
+
+.btn-green{
     font-size: 16px;
-    width: 400px;
-    height: 48px;
+    background: #00C247;
+    width:271px;
+    height:56px;
     border-radius: 16px;
     border: none;
-    border-radius: 16px;
     color: white;
-    background-color: #482D83;
+    transition: 0.5s;
+    align-self: center;
+    align-items: center;
+    padding-left: 55px;
+}
+.btn-green:hover{
+    cursor: pointer;
+    background: #01a13c;
     transition: 0.5s;
 }
-.btn-purple:hover{
-    cursor: pointer;
-    background-color: #564696;
-    transition: 0.5s;
+.btn-green img{
+    margin-right: 16px;
 }
 
-@media (max-width: 1222px){
-    form .form-container{
-        flex-direction: column;
-    }
+.dflex{
+    display: flex;
+}
+.width100{
+    width: 100%;
+}
+
+.center-text{
+    text-align: center;
+}
+
+.border-radius-purple-left{
+    border-radius: 16px 0px 0px 0px;
+}
+.border-radius-purple-reght{
+    border-radius: 0px 16px 0px 0px;
+}
+
+.info-purple{
+    color: white;
+    background:#482D83;
+    height: 72px;
+    padding: 24px 40px;
+    max-width: 100%;
+}
+.info-white{
+    /* background: #fafafa; */
+    height: 80px;
+    padding: 28px 40px;
+    align-items: center ;
+    margin: 8px 0;
+}
+.info-white :nth-child(1){
+    margin-right: 10px;
+
+}
+.info-white img:hover{
+    cursor: pointer;
+}
+
+/* botão de voltar temporario */
+#voltar{
+    position: fixed;
+    right: 50%;
+    top: 10px;
+}
+
+.cinza100{
+    background-color: #F5F5F5;
+}
+.cinza50{
+    background-color: #FAFAFA;
 }

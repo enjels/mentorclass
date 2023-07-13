@@ -5,7 +5,7 @@
     list-style: none;
 
 }
-.box-content,button{
+.box-content,button,.boxcheck p{
     font-family: 'Poppins', sans-serif;
 
 }
@@ -99,6 +99,7 @@ h4{
 .direction-col{
     display:flex;
     flex-direction: column;
+    margin-right: 24px;
 }
 
 input{
@@ -114,7 +115,7 @@ input{
     max-width:100%;
     max-height: 100vh;
     border-radius: 24px;
-    padding: 20px 20px 32px 20px;
+    padding: 0.1px 0px 0.1px 0px;
     box-shadow: 0px 0px 25px 0px rgba(163, 163, 163, 0.2);
     -webkit-box-shadow: 0px 0px 25px 0px rgba(163, 163, 163, 0.2);;
     -moz-box-shadow: 0px 0px 25px 0px rgba(163, 163, 163, 0.2);
@@ -139,15 +140,14 @@ input{
     padding-top: 5px;
 }
 
-main p{
-    margin-left: 20px;
+main .leterpurple{
     border-bottom: solid 1px #BDBDBD;
     padding-bottom: 17px;
     font-size: 20px;
     color: #482D83;
 }
 form{
-    margin-top: 32px;
+    margin: 32px;
 }
 
 form input,.tdm{
@@ -155,17 +155,17 @@ form input,.tdm{
     height: 56px;
     border-radius: 16px;
     border: 1.5px solid #E0E0E0;
-    border-radius: 16px;
-}
-form label{
-    color: #757575;
-    padding-left: 20px;
 }
 
-form :nth-child(2){
-    margin-left: 16px;
+form .label{
+    color: #757575;
+    font-weight: 400;
 }
-.btn-purple{
+.form-container{
+    margin: 32px 0px 20px 0px;
+}
+
+form .btn-purple{
     font-size: 16px;
     width: 400px;
     height: 48px;
@@ -183,12 +183,53 @@ form :nth-child(2){
     transition: 0.5s;
 }
 
-@media (max-width: 1222px){
-    form :nth-child(1){
-        flex-direction: column;
+/* checkebox */
+.switch {
+    position: relative;
+    background-color: #c20000;
+    width: 60px;
+    height: 30px;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .slider {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    transition: all .5s ease-in-out;
+  }
+  #chk{
+    display: none;
+  }
+  
+  #chk:checked ~ .switch {
+    background-color: #4ec200;
+  }
+  
+  #chk:checked ~ .switch .slider {
+    transform: translateX(28px);
+  }
 
-    }
-	form :nth-child(2){
-        margin-left: 0px;
+  .boxcheck label,p{
+    margin: 9px 12px 0px 0px;
+    font-weight: 800;
+  }
+  .boxcheck div{
+    align-items: center;
+  }
+  .boxcheck .dflex p{
+    font-weight: 400;
+  }
+
+@media (max-width: 1222px){
+    form .form-container{
+        flex-direction: column;
     }
 }

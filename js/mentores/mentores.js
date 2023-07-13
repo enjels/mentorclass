@@ -30,15 +30,23 @@ mentores.forEach(mentores => {
   });
 }
 
+const btnPurpleMenu = () => {
+  const purpleBTN =document.getElementById('mentores')
+    purpleBTN.classList.toggle("btnstatic-purple")
+}
+
  //recebe os dados da api
 const getmentores = async () => {
+
     const retorno = await fetch ('http://localhost:3000/mentores')
     const mentores = await retorno.json()
 
     rendermentor(mentores)
+    btnPurpleMenu()
 }
 
 
+getmentores()
 //retorna ao login
 const voltar = () => {
     window.location = "../../index.html"
@@ -58,13 +66,7 @@ const deletarMentor = async (id) => {
     })
 }
 
-getmentores()
 
-//funções do menu
-//vai para pagina mentoies
-// const mentores = () =>{
-//   window.location = "/html/mentores/mentores.html"
-// }
 //vai para pagina mentoias
 const mentorias = () => {
    window.location = "/html/mentorias/mentorias.html"

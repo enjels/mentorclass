@@ -30,7 +30,7 @@
                         <img src="../../svg/mentorIA.svg" alt="">
                         Mentorias
                     </button>
-                    <button class="btn-menu dflex">
+                    <button onclick="turmas()" class="btn-menu dflex">
                         <img src="../../svg/turmas.svg" alt="">
                         Turmas
                     </button>
@@ -57,15 +57,16 @@
                 </div>
                 <div>
                     <main class="main-content">
-                        <p>Dados</p>
                         <form id="formulario" action="">
+                            <p class="leterpurple">Dados</p>
+    
                             <div class=" form-container dflex">
                                 <div class="direction-col">
-                                    <label for="nome">Name</label>
+                                    <label class="label" for="nome">Título da mentoria</label>
                                     <input type="text" name="nome" id="nome">
                                 </div>
                                 <div class="direction-col">
-                                    <label for="email">E-mail</label>
+                                    <label class="label" for="email">E-mail</label>
                                     <input type="email" name="email" id="email">
                                 </div>
                             </div>

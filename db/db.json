@@ -6,14 +6,9 @@
       "id": 1
     },
     {
-      "nome": "ricardo",
-      "email": "ricardo@gmail.com",
+      "nome": "detergentemmm",
+      "email": "duda@gmail.commmm",
       "id": 2
-    },
-    {
-      "nome": "jose",
-      "email": "jose@gmail.com",
-      "id": 3
     }
   ],
   "titulomentorias": [
@@ -25,6 +20,34 @@
     {
       "tipo": "ajuda php",
       "nome": "ricardo",
+      "id": 2
+    }
+  ],
+  "turmas": [
+    {
+      "mentoria": "gerenciamento global ",
+      "nome": "jose",
+      "id": 1
+    },
+    {
+      "mentoria": "gerenciamento global ",
+      "nome": "jose",
+      "data": "10/02/2023",
+      "id": 2
+    }
+  ],
+  "diadasemana": [
+    {
+      "mentoria": "gerenciamento global ",
+      "nome": "jose",
+      "id": 1
+    },
+    {
+      "segunda": "Segunda",
+      "terca": "Terça",
+      "quarta": "Quarta",
+      "quinta": "Quinta",
+      "sexta": "Sexta",
       "id": 2
     }
   ]
