@@ -19,14 +19,7 @@
   "titulomentorias": [
     {
       "tipo": "virgilio conceição cesar",
-      "nome": "marcos",
       "checkbox": true,
-      "id": 1
-    },
-    {
-      "tipo": "virgilio conceição cesar",
-      "nome": "marcos",
-      "checkbox": false,
       "id": 2
     }
   ],

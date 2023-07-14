@@ -5,11 +5,15 @@
     list-style: none;
 
 }
-.box-content,button,.boxcheck p{
+.box-content,button,input,#mentor,.boxcheck p {
     font-family: 'Poppins', sans-serif;
-
+    font-size: 16px;
 }
-
+select,option{
+    cursor: pointer;
+    padding-left: 16px;
+    
+}
 menu{
     display: flex;
     flex-direction: column;
@@ -71,6 +75,10 @@ menu{
 .sub-white .p-user{
     margin-left: 16px;
 }
+.p-user :last-child, input {
+    font-weight: 400;
+}
+
 .svg-user{
     width: 56px;
     margin-left:16px;
