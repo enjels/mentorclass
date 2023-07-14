@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Turma</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Sora:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <script defer src="../../js/turmas/novaTurma.js"></script>
+    <link rel="stylesheet" href="../../css/turmas/novaTurma.css">
+
+</head>
+
+<body>
+
+    <div class="box-content">
+        <div class="box-purple">
+            <img class="logo" src="../../svg/logo.svg" alt="">
+            <menu>
+                <button onclick="mentores()" class="btn-menu dflex">
+                    <img src="../../svg/mentores.svg" alt="">
+                    Mentores
+                </button>
+                <button onclick="mentorias()" class="btn-menu dflex">
+                    <img src="../../svg/mentorIA.svg" alt="">
+                    Mentorias
+                </button>
+                <button onclick="turmas()" class="btn-menu dflex">
+                    <img src="../../svg/turmas.svg" alt="">
+                    Turmas
+                </button>
+                <button class="btn-menu dflex">
+                    <img src="../../svg/alunos.svg" alt="">
+                    Alunos
+                </button>
+            </menu>
+        </div>
+
+        <div class="box-silver">
+            <header class="white">
+                <div class="sub-white">
+                    <img class="svg-user" src="../../svg/user.svg" alt="">
+                    <div class="p-user">
+                        <p>Usuário</p>
+                        <p>desenvolvedor@gmail.com</p>
+                    </div>
+                </div>
+            </header>
+            <div id="voltar" class="BT-H4 dflex">
+                <button class="btn-voltar" onclick="turmas()"><img src="../../svg/voltar.svg" alt=""></button>
+                <div>
+                    <h4>Turma</h4>
+                </div>
+            </div>
+            <div>
+                <main class="main-content">
+                    <form id="formulario" action="">
+                        <p class="leterpurple">Mentoria</p>
+
+                        <div class=" form-container dflex">
+                            <div class="direction-col">
+                                <label class="label" for="mentoria">Mentoria</label>
+                                <select name="mentoria" id="mentoria" class="width400">
+                                </select>
+                            </div>
+                            <div class="direction-col">
+                                <label class="label" for="mentor">Mentor</label>
+                                <select name="mentor" id="mentor" class="width400">
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class=" form-container2 dflex">
+                            <div class="direction-col">
+                                <label class="label" for="date">Data de início</label>
+                                <input type="date" name="date" id="date" class="width246">
+                            </div>
+                            <div class="direction-col">
+                                <label class="label" for="dia-da-semana">Dia da semana</label>
+                                <select name="dia-da-semana" id="dia-da-semana" class="width246">
+                                </select>
+                            </div>
+                            <div class="direction-col">
+                                <label class="label" for="time">Hora de início</label>
+                                <input type="time" name="" id="" class="width246">
+
+                            </div>
+                            <div class="direction-col">
+                                <label class="label" for="time">Hora de fim</label>
+                                <input type="time" name="" id="" class="width246">
+
+                            </div>
+                        </div>
+                        <p class="leterpurple">Turma</p>
+                        <div class=" form-container3 dflex">
+                            <div class="direction-col">
+                                <label class="label" for="turma">turma</label>
+                            <input type="text" name="turma" id="turma">
+                            </div>
+                            <div class="direction-col">
+                                <label class="label" for="link-aula">Link da aula</label>
+                                <input type="url" name="link-aula" id="link-aula">
+                            </div>
+                            <div class="direction-col">
+                                <label class="label" for="QTd">Qtd encontros </label>
+                                <input type="number" name="encontro" id="encontro" class="width246">
+                            </div>
+                            
+                        </div>
+                        <button class="btn-purple" type="submit">
+                            Salvar
+                        </button>
+                    </form>
+                </main>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

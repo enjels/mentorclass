@@ -25,6 +25,7 @@ const carregarSelect = async ()=> {
     });
 }
 carregarSelect()
+
 const novaMetoria = async (titulomentorias) => {
     await fetch('http://localhost:3000/mentorias',{
         method: 'POST',
@@ -46,9 +47,9 @@ event.preventDefault()
 
     const mentorObjeto = await buscarMentorias(mentor)
     const titulomentorias = {
-            mentoria,
-            mentor: mentorObjeto.mentor,
-            checkbox
+        mentoria,
+        mentor: mentorObjeto.mentor,
+        checkbox
     }
 
     novaMetoria(titulomentorias)

@@ -66,11 +66,11 @@ const novaTurma = () => {
 }
 //leva para pagagina editarMentor
 const editarTurma = (id) => {
-  window.location = `/html/mentores/editarmentor.html?id=${id}`
+  window.location = `/html/turmas/editarTurma.html?id=${id}`
 }
 
 const deletarTurma = async (id) => {
-  await fetch(`http://localhost:3000/mentores/${id}`, {
+  await fetch(`http://localhost:3000/turmas/${id}`, {
     method: 'DELETE'
   })
 }

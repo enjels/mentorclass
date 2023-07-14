@@ -30,7 +30,6 @@
     },
     {
       "mentoria": "ajuda php",
-      "mentor": "bruno",
       "checkbox": false,
       "id": 2
     },
@@ -58,8 +57,9 @@
       "mentoria": "ajuste e reparo ",
       "datadeinicio": "10/02/2023",
       "diadasemana": "segunda-feira",
-      "horario": "19:00h - 20:00h",
-      "encontros":"0/10",
+      "horarioinicio": "19:00h",
+      "horariofim": "20:00",
+      "encontros": "0/10",
       "id": 1
     },
     {
@@ -68,9 +68,10 @@
       "mentoria": "gerenciamento global ",
       "datadeinicio": "10/02/2023",
       "diadasemana": "terça-feira",
-      "horario": "19:00h - 20:00h",
-      "encontros":"1/10",
-      "id": 1
+      "horarioinicio": "19:00h",
+      "horariofim": "20:00",
+      "encontros": "1/10",
+      "id": 2
     }
   ]
 }
