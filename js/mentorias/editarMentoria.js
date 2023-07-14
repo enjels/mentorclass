@@ -1,5 +1,5 @@
 const formulario = document.getElementById('formulario')
-let titulomentoriasId = null
+let mentoriasId = null
 const buscarMentorias = async (id)=> {
     const resposta = await fetch(`http://localhost:3000/mentores/${id}`)
     const mentor = await resposta.json()
@@ -19,8 +19,8 @@ const carregarSelect = async ()=> {
     const opcaoVazia = new Option('Selecione um mentor...')
     mentorSelect.options.add(opcaoVazia)
 
-    mentores.forEach(mentor => {
-    const opcao = new Option(mentor.nome, mentor.id)
+    mentores.forEach(mentores => {
+    const opcao = new Option(mentores.mentor, mentores.id)
     mentorSelect.options.add(opcao)
     });
 }
@@ -28,38 +28,38 @@ const carregarSelect = async ()=> {
 const getIdUrl = () => {
    const paramsString = window.location.search
    const params = new URLSearchParams(paramsString)
-   titulomentoriasId = params.get('id')
+   mentoriasId = params.get('id')
 }
 
 const buscartitulomentorias = async () => {
-   const resposta = await fetch(`http://localhost:3000/titulomentorias/${titulomentoriasId}`)
+   const resposta = await fetch(`http://localhost:3000/mentorias/${mentoriasId}`)
     const titulomentorias = await resposta.json()
     return titulomentorias
 }
 
-const editarMetoria = async (titulomentorias) => {
-    await fetch(`http://localhost:3000/titulomentorias/${titulomentoriasId}`,{
+const editarMetoria = async (mentorias) => {
+    await fetch(`http://localhost:3000/mentorias/${mentoriasId}`,{
         method: 'PUT',
         headers: {
             "Accept": 'application/json, text/plain, */*',
             "Content-Type": 'application/json'
         },
-        body: JSON.stringify(titulomentorias)
+        body: JSON.stringify(mentorias)
     })
-    window.location = "./mentorias.html"
+    window.location = "../mentorias/mentorias.html"
 }
-carregarDadosFormulario = async (titulomentorias) => {
-   document.getElementById('nome').value = titulomentorias.tipo
-   document.getElementById('mentor').value = titulomentorias.nome
-   document.getElementById('chk').cheked = titulomentorias.checkbox
+carregarDadosFormulario = async (mentorias) => {
+   document.getElementById('nome').value = mentorias.mentoria
+   document.getElementById('mentor').value = mentorias.mentor
+   document.getElementById('chk').cheked = mentorias.checkbox
    const content_chk = document.getElementById('content-chk')
-   if (titulomentorias.checkbox == true) {
+   if (mentorias.checkbox == true) {
     content_chk.innerHTML = `<input onclick="check()" type="checkbox" value="True" checked name="chk" id="chk" />
     <label for="chk" class="switch">
     <span class="slider"></span>
     </label>
     <p id="inativo">Ativo</p>`
-   }else if(titulomentorias.checkbox == false) {
+   }else if(mentorias.checkbox == false) {
     content_chk.innerHTML = `<input onclick="check()" type="checkbox" name="chk" id="chk" />
     <label for="chk" class="switch">
     <span class="slider"></span>
@@ -92,14 +92,14 @@ const carregarDados = async () => {
 formulario.addEventListener('submit', async(event) => {
 event.preventDefault()
 
-    const tipo = formulario.elements['nome'].value
+    const mentoria = formulario.elements['nome'].value
     const mentor = formulario.elements['mentor'].value
     const checkbox = formulario.elements['chk'].checked
 
     const mentorObjeto = await buscarMentorias(mentor)
     const titulomentorias = {
-            tipo,
-            nome: mentorObjeto.nome,
+            mentoria,
+            mentor: mentorObjeto.mentor,
             checkbox
     }
 

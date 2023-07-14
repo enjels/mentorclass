@@ -2,16 +2,17 @@
 <html lang="pt-br">
 
 <head>
-    <title>Nova Mentoria</title>
+    <title>Nova Turma</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Sora:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Sora:wght@400;600&display=swap"
+        rel="stylesheet">
 
-    <script defer src="../../js/mentorias/novaMentorias.js"></script>
-    <link rel="stylesheet" href="../../css/mentorias/novaMentoria.css">
+    <script defer src="../../js/turmas/novaTurma.js"></script>
+    <link rel="stylesheet" href="../../css/turmas/novaTurma.css">
 
 </head>
 
@@ -52,7 +53,9 @@
             </header>
             <div id="voltar" class="BT-H4 dflex">
                 <button class="btn-voltar" onclick="mentorias()"><img src="../../svg/voltar.svg" alt=""></button>
-                <div><h4>Nova mentoria</h4></div>
+                <div>
+                    <h4>Nova Turma</h4>
+                </div>
             </div>
             <div>
                 <main class="main-content">
@@ -61,29 +64,42 @@
 
                         <div class=" form-container dflex">
                             <div class="direction-col">
-                                <label class="label" for="nome">Título da mentoria</label>
-                                <input type="text" name="nome" id="nome">
+                                <label class="label" for="email">Mentoria</label>
+                                <select name="mentoria" id="mentoria" class="width400">
+                                </select>
                             </div>
                             <div class="direction-col">
-                                <label class="label" for="email">Mentor</label>
-                                <select name="mentor" id="mentor" class="tdm">
+                                <label class="label" for="mentor">Mentor</label>
+                                <select name="mentor" id="mentor" class="width400">
                                 </select>
                             </div>
                         </div>
-                        <div class="boxcheck">
-                            <p class="label">status</p>
-                            <div class="dflex">
-                                <input onclick="check()" type="checkbox" name="chk" id="chk" />
-                                <label for="chk" class="switch">
-                                <span class="slider"></span>
-                                </label>
-                                <p id="inativo">Inativo</p>
-                                <label for="casa"></label>
+
+                        <div class=" form-container dflex">
+                            <div class="direction-col">
+                                <label class="label" for="date">Data de início</label>
+                                <input type="date" name="date" id="date" class="width246">
                             </div>
-                              <button class="btn-purple"  type="submit">
-                                Salvar
-                            </button>
+                            <div class="direction-col">
+                                <label class="label" for="dia-da-semana">Dia da semana</label>
+                                <select name="dia-da-semana" id="dia-da-semana" class="width246">
+                                </select>
+                            </div>
+                            <div class="direction-col">
+                                <label class="label" for="time">Hora de início</label>
+                                <input type="time" name="" id="" class="width246">
+
+                            </div>
+                            <div class="direction-col">
+                                <label class="label" for="time">Hora de fim</label>
+                                <input type="time" name="" id="" class="width246">
+
+                            </div>
+
                         </div>
+                        <button class="btn-purple" type="submit">
+                            Salvar
+                        </button>
                     </form>
                 </main>
             </div>

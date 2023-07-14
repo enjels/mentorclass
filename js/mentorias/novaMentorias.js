@@ -19,14 +19,14 @@ const carregarSelect = async ()=> {
     const opcaoVazia = new Option('Selecione um mentor...')
     mentorSelect.options.add(opcaoVazia)
 
-    mentores.forEach(mentor => {
-    const opcao = new Option(mentor.nome, mentor.id)
+    mentores.forEach(mentores => {
+    const opcao = new Option(mentores.mentor, mentores.id)
     mentorSelect.options.add(opcao)
     });
 }
 carregarSelect()
 const novaMetoria = async (titulomentorias) => {
-    await fetch('http://localhost:3000/titulomentorias',{
+    await fetch('http://localhost:3000/mentorias',{
         method: 'POST',
         headers: {
             "Accept": 'application/json, text/plain, */*',
@@ -40,14 +40,14 @@ const novaMetoria = async (titulomentorias) => {
 formulario.addEventListener('submit', async(event) => {
 event.preventDefault()
 
-    const tipo = formulario.elements['nome'].value
+    const mentoria = formulario.elements['nome'].value
     const mentor = formulario.elements['mentor'].value
     const checkbox = formulario.elements['chk'].checked
 
     const mentorObjeto = await buscarMentorias(mentor)
     const titulomentorias = {
-            tipo,
-            nome: mentorObjeto.nome,
+            mentoria,
+            mentor: mentorObjeto.mentor,
             checkbox
     }
 

@@ -1,54 +1,76 @@
 {
   "mentores": [
     {
-      "nome": "marcos",
+      "mentor": "marcos",
       "email": "masrcos@gmail.com",
       "id": 1
     },
     {
-      "nome": "detergentemmm",
+      "mentor": "detergentemmm",
       "email": "duda@gmail.commmm",
       "id": 2
     },
     {
-      "nome": "virgilio conceição cesarsdasdasd",
+      "mentor": "virgilio conceição cesarsdasdasd",
       "email": "enjels@outlook.comssdasdasd",
+      "id": 3
+    },
+    {
+      "mentor": "s",
+      "email": "s@gmail.com",
+      "id": 4
+    }
+  ],
+  "mentorias": [
+    {
+      "mentoria": "ajuda js",
+      "mentor": "marcos",
+      "checkbox": false,
+      "id": 1
+    },
+    {
+      "mentoria": "ajuda php",
+      "mentor": "bruno",
+      "checkbox": false,
+      "id": 2
+    },
+    {
+      "mentoria": "virgílio",
+      "mentor": "jose",
+      "checkbox": true,
       "id": 3
     }
   ],
-  "titulomentorias": [
+  "diasdasemana": [
     {
-      "tipo": "virgilio conceição cesar",
-      "checkbox": true,
+      "segunda": "Segunda-feira",
+      "terca": "Terça-feira",
+      "quarta": "Quarta-feira",
+      "quinta": "Quinta-feira",
+      "sexta": "Sexta-feira",
       "id": 2
     }
   ],
   "turmas": [
     {
-      "mentoria": "gerenciamento global ",
-      "nome": "jose",
+      "turma": "turma 05",
+      "mentor": "jose",
+      "mentoria": "ajuste e reparo ",
+      "datadeinicio": "10/02/2023",
+      "diadasemana": "segunda-feira",
+      "horario": "19:00h - 20:00h",
+      "encontros":"0/10",
       "id": 1
     },
     {
+      "turma": "turma 06",
+      "mentor": "jose",
       "mentoria": "gerenciamento global ",
-      "nome": "jose",
-      "data": "10/02/2023",
-      "id": 2
-    }
-  ],
-  "diadasemana": [
-    {
-      "mentoria": "gerenciamento global ",
-      "nome": "jose",
+      "datadeinicio": "10/02/2023",
+      "diadasemana": "terça-feira",
+      "horario": "19:00h - 20:00h",
+      "encontros":"1/10",
       "id": 1
-    },
-    {
-      "segunda": "Segunda",
-      "terca": "Terça",
-      "quarta": "Quarta",
-      "quinta": "Quinta",
-      "sexta": "Sexta",
-      "id": 2
     }
   ]
 }

@@ -14,11 +14,11 @@ const formulario = document.getElementById('formulario')
 formulario.addEventListener('submit', async (event) => {
 event.preventDefault()
 
-    const nome = formulario.elements['nome'].value
+    const mentor = formulario.elements['nome'].value
     const email = formulario.elements['email'].value
     console.log(email)
     const mentores = {
-            nome,
+            mentor,
             email,
     }
 

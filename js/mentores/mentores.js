@@ -16,7 +16,7 @@ mentores.forEach(mentores => {
     }
 
     info_content_1.innerHTML += `
-      <p class="info-white ${corlist}">${mentores.nome}</p>
+      <p class="info-white ${corlist}">${mentores.mentor}</p>
     `;
     info_content_2.innerHTML += `
       <p class="info-white ${corlist}">${mentores.email}</p>

@@ -25,11 +25,11 @@ const buscarMentores = async () => {
 
 formulario.addEventListener('submit', (event) => {
     event.preventDefault()
-    const nome = formulario.elements['nome'].value
+    const mentor = formulario.elements['nome'].value
     const email = formulario.elements['email'].value
 
     const mentores = {
-        nome,
+        mentor,
         email,
 
     }
@@ -41,7 +41,7 @@ formulario.addEventListener('submit', (event) => {
 
 // Injeto os dados do livro no formulario, com dados do json
 const carregarDadosFormulario = async (mentores) => {
-    document.getElementById('nome').value = mentores.nome
+    document.getElementById('nome').value = mentores.mentor
     document.getElementById('email').value = mentores.email
 
 
