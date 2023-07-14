@@ -5,7 +5,7 @@ const rendermentor = (titulomentorias) =>{
     const info_content_2 = document.getElementById('info-content2')
     const info_content_3 = document.getElementById('info-content3')
     const info_content_4 = document.getElementById('info-content4')
-    
+
     let contador = 1
     titulomentorias.forEach(titulomentorias => {
         contador++;
@@ -15,7 +15,7 @@ const rendermentor = (titulomentorias) =>{
         }else{
             corlist = 'cinza100'
         }
-    
+
         info_content_1.innerHTML += `
           <p class="info-white ${corlist}">${titulomentorias.tipo}</p>
         `;

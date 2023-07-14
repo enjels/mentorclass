@@ -42,16 +42,30 @@ event.preventDefault()
 
     const tipo = formulario.elements['nome'].value
     const mentor = formulario.elements['mentor'].value
+    const checkbox = formulario.elements['chk'].checked
 
     const mentorObjeto = await buscarMentorias(mentor)
     const titulomentorias = {
             tipo,
-            nome: mentorObjeto.nome
+            nome: mentorObjeto.nome,
+            checkbox
     }
 
     novaMetoria(titulomentorias)
 
 })
+
+const check = ()=> {
+    const checkbox = formulario.elements['chk'].checked
+    
+    console.log(checkbox)
+    if(checkbox == true){
+        inativo.innerText = "Ativo"
+    }else if(checkbox == false){
+        inativo.innerText = "inativo"
+    }
+
+}
 
 
 //funções menu/navegar

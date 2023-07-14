@@ -197,11 +197,19 @@ h4,.main-content{
     cursor: pointer;
 }
 
-/* botão de voltar temporario */
-#voltar{
-    position: fixed;
-    right: 50%;
-    top: 10px;
+
+.ativocheked{ 
+    color: #00C247;
+    background: #D9FEE6;
+    padding: 8px 18px;
+    border-radius: 8px;
+}
+.inativocheked{
+    color: #FF3333;
+    background: #FFE1E1;
+    padding: 8px 18px;
+    border-radius: 8px;
+
 }
 
 .cinza100{

@@ -51,8 +51,37 @@ const editarMetoria = async (titulomentorias) => {
 carregarDadosFormulario = async (titulomentorias) => {
    document.getElementById('nome').value = titulomentorias.tipo
    document.getElementById('mentor').value = titulomentorias.nome
+   document.getElementById('chk').cheked = titulomentorias.checkbox
+   const content_chk = document.getElementById('content-chk')
+   if (titulomentorias.checkbox == true) {
+    content_chk.innerHTML = `<input onclick="check()" type="checkbox" value="True" checked name="chk" id="chk" />
+    <label for="chk" class="switch">
+    <span class="slider"></span>
+    </label>
+    <p id="inativo">Ativo</p>`
+   }else if(titulomentorias.checkbox == false) {
+    content_chk.innerHTML = `<input onclick="check()" type="checkbox" name="chk" id="chk" />
+    <label for="chk" class="switch">
+    <span class="slider"></span>
+    </label>
+    <p id="inativo">Inativo</p>`
+   }
+
 }
 
+const check = async ()=> {
+    const checkbox = formulario.elements['chk'].checked
+    const inativo = document.getElementById('inativo')
+    console.log(checkbox)
+    if(checkbox == true){
+        inativo.innerText = "Ativo"
+    }else if(checkbox == false){
+        inativo.innerText = "inativo"
+    }
+
+}
+
+check()
 const carregarDados = async () => {
    getIdUrl()
    const titulomentorias = await buscartitulomentorias()
@@ -65,11 +94,13 @@ event.preventDefault()
 
     const tipo = formulario.elements['nome'].value
     const mentor = formulario.elements['mentor'].value
+    const checkbox = formulario.elements['chk'].checked
 
     const mentorObjeto = await buscarMentorias(mentor)
     const titulomentorias = {
             tipo,
-            nome: mentorObjeto.nome
+            nome: mentorObjeto.nome,
+            checkbox
     }
 
     editarMetoria(titulomentorias)

@@ -19,7 +19,6 @@
 <body>
 
     <div class="box-content">
-
         <div class="box-purple">
             <img class="logo" src="../../svg/logo.svg" alt="">
             <menu>
@@ -75,11 +74,12 @@
                         <div class="boxcheck">
                             <p class="label">status</p>
                             <div class="dflex">
-                                <input type="checkbox" id="chk" />
+                                <input onclick="check()" type="checkbox" name="chk" id="chk" />
                                 <label for="chk" class="switch">
                                 <span class="slider"></span>
                                 </label>
-                                <p>Ativo</p>
+                                <p id="inativo">Inativo</p>
+                                <label for="casa"></label>
                             </div>
                               <button class="btn-purple"  type="submit">
                                 Salvar
