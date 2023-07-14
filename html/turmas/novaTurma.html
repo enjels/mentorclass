@@ -52,7 +52,7 @@
                 </div>
             </header>
             <div id="voltar" class="BT-H4 dflex">
-                <button class="btn-voltar" onclick="mentorias()"><img src="../../svg/voltar.svg" alt=""></button>
+                <button class="btn-voltar" onclick="turmas()"><img src="../../svg/voltar.svg" alt=""></button>
                 <div>
                     <h4>Nova Turma</h4>
                 </div>
@@ -60,11 +60,11 @@
             <div>
                 <main class="main-content">
                     <form id="formulario" action="">
-                        <p class="leterpurple">Dados</p>
+                        <p class="leterpurple">Mentoria</p>
 
                         <div class=" form-container dflex">
                             <div class="direction-col">
-                                <label class="label" for="email">Mentoria</label>
+                                <label class="label" for="mentoria">Mentoria</label>
                                 <select name="mentoria" id="mentoria" class="width400">
                                 </select>
                             </div>
@@ -75,7 +75,7 @@
                             </div>
                         </div>
 
-                        <div class=" form-container dflex">
+                        <div class=" form-container2 dflex">
                             <div class="direction-col">
                                 <label class="label" for="date">Data de início</label>
                                 <input type="date" name="date" id="date" class="width246">
@@ -95,7 +95,22 @@
                                 <input type="time" name="" id="" class="width246">
 
                             </div>
-
+                        </div>
+                        <p class="leterpurple">Turma</p>
+                        <div class=" form-container3 dflex">
+                            <div class="direction-col">
+                                <label class="label" for="turma">turma</label>
+                            <input type="text" name="turma" id="turma">
+                            </div>
+                            <div class="direction-col">
+                                <label class="label" for="link-aula">Link da aula</label>
+                                <input type="url" name="link-aula" id="link-aula">
+                            </div>
+                            <div class="direction-col">
+                                <label class="label" for="QTd">Qtd encontros </label>
+                                <input type="number" name="encontro" id="encontro" class="width246">
+                            </div>
+                            
                         </div>
                         <button class="btn-purple" type="submit">
                             Salvar

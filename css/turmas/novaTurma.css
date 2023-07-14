@@ -178,6 +178,12 @@ form .label{
 .form-container{
     margin: 32px 0px 20px 0px;
 }
+.form-container2{
+    margin: 0px 0px 32px 0px;
+}
+.form-container3{
+    margin: 32px 0px 32px 0px;
+}
 
 form .btn-purple{
     font-size: 16px;
@@ -186,7 +192,6 @@ form .btn-purple{
     border-radius: 16px;
     border: none;
     border-radius: 16px;
-    margin-top: 27px;
     color: white;
     background-color: #482D83;
     transition: 0.5s;
@@ -197,9 +202,11 @@ form .btn-purple{
     transition: 0.5s;
 }
 
-
 @media (max-width: 1222px){
     form .form-container{
+        flex-direction: column;
+    }
+    form .form-container2{
         flex-direction: column;
     }
 }
