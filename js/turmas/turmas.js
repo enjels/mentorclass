@@ -29,7 +29,7 @@ const rendermentor = (turmas) => {
 
     info_content_5.innerHTML += `<p class="info-white ${corlist}">${turmas.diadasemana}</p>`
 
-    info_content_6.innerHTML += `<p class="info-white ${corlist}">${turmas.horario}</p>`
+    info_content_6.innerHTML += `<p class="info-white ${corlist}">${turmas.horarioinicio}h-${turmas.horariofim}h</p>`
 
     info_content_7.innerHTML += `<p class="info-white ${corlist}">${turmas.encontros}</p>`
 

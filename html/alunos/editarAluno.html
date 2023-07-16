@@ -2,16 +2,16 @@
 <html lang="pt-br">
 
 <head>
-    <title>Editar Mentoria</title>
+    <title>Editar aluno</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Sora:wght@400;600&display=swap" rel="stylesheet">
-
-    <script defer src="../../js/mentorias/editarMentoria.js"></script>
-    <link rel="stylesheet" href="../../css/mentorias/editarMentoria.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Sora:wght@400;600&display=swap"rel="stylesheet">
+    
+    <script defer src="../../js/alunos/editarAluno.js"></script>
+    <link rel="stylesheet" href="../../css/alunos/editarAluno.css">
 
 </head>
 
@@ -52,8 +52,8 @@
                 </div>
             </header>
             <div id="voltar" class="BT-H4 dflex">
-                <button class="btn-voltar" onclick="mentorias()"><img src="../../svg/voltar.svg" alt=""></button>
-                <div><h4>mentoria</h4></div>
+                <button class="btn-voltar" onclick="alunos()"><img src="../../svg/voltar.svg" alt=""></button>
+                <h4>aluno</h4>
             </div>
             <div>
                 <main class="main-content">
@@ -62,29 +62,22 @@
 
                         <div class=" form-container dflex">
                             <div class="direction-col">
-                                <label class="label" for="nome">Título da mentoria</label>
+                                <label class="label" for="nome">Nome</label>
                                 <input type="text" name="nome" id="nome">
                             </div>
                             <div class="direction-col">
-                                <label class="label" for="email">Mentor</label>
-                                <select name="mentor" id="mentor" class="tdm">
-                                    <option id="teste" value="casa">casa</option>
+                                <label class="label" for="email">E-mail</label>
+                                <input type="email" name="email" id="email">
+                            </div>
+                            <div class="direction-col">
+                                <label class="label" for="turma">Turma</label>
+                                <select name="turma" id="turma" class="tdm">
                                 </select>
                             </div>
                         </div>
-                        <div class="boxcheck">
-                            <p class="label">status</p>
-                            <div id="content-chk" class="dflex">
-                                <input onclick="check()" type="checkbox" name="chk" id="chk" />
-                                <label for="chk" class="switch">
-                                <span class="slider"></span>
-                                </label>
-                                <p id="inativo"></p>
-                            </div>
-                              <button class="btn-purple"  type="submit">
-                                Salvar
-                            </button>
-                        </div>
+                        <button class="btn-purple"  type="submit">
+                            Salvar
+                        </button>
                     </form>
                 </main>
             </div>

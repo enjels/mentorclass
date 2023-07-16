@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Mentores</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Sora:wght@400;600&display=swap"rel="stylesheet">
+    
+    <script defer src="../../js/alunos/alunos.js"></script>
+    <link rel="stylesheet" href="../../css/alunos/alunos.css">
+
+</head>
+
+<body>
+    <div class="box-content">
+
+        <div class="box-purple">
+            <img class="logo" src="../../svg/logo.svg" alt="">
+            <menu>
+                <button onclick="mentores()" id="mentores" class="btn-menu dflex">
+                    <img src="../../svg/mentores.svg" alt="">
+                    <p>Mentores</p>
+                </button>
+                <button onclick="mentorias()" class="btn-menu dflex">
+                    <img src="../../svg/mentorIA.svg" alt="">
+                    <p>Mentorias</p>
+                </button>
+                <button onclick="turmas()" class="btn-menu dflex">
+                    <img src="../../svg/turmas.svg" alt="">
+                    <p>Turmas</p>
+                </button>
+                <button id="alunos" class="btn-menu dflex">
+                    <img src="../../svg/alunos.svg" alt="">
+                    Alunos
+                </button>
+            </menu>
+        </div>
+
+        <div class="box-silver">
+            <header class="white">
+                <div class="sub-white">
+                    <img class="svg-user" src="../../svg/user.svg" alt="">
+                    <div class="p-user">
+                        <p>Usuário</p>
+                        <p>desenvolvedor@gmail.com</p>
+                    </div>
+                </div>
+            </header>
+
+            <h4>Alunos</h4>
+
+            <div>
+                <main class="main-content">
+                    <form id="formulario" action="">
+                        <div class="search-lupa">
+                            <input class="input-search" type="search" name="search" id="search"
+                                placeholder="Pesquise uma palavra chave">
+                            <img src="../../svg/search.svg" alt="">
+                        </div>
+
+                        <button onclick="novoAluno()" class="btn-green dflex" type="button">
+                            <img src="../../svg/adicionar.svg" alt="">
+                            <p>Nova Aluno</p>
+                        </button>
+                    </form>
+                    <div class="box-info">
+                        <div class="dflex">
+                            <div class="width100">
+                                <p class="info-purple border-radius-purple-left">Nome</p>
+                                <div id="info-content1">
+                                    <!-- <p class="info-white">Juliana Amaral</p> -->
+                                </div>
+                            </div>
+                            <div class=" width100">
+                                <p class="info-purple">E-mail</p>
+                                <div id="info-content2">
+                                    <!-- <p class="info-white">Juliana@gmaiil.com</p> -->
+                                </div>
+                            </div>
+                            <div class="center-text">
+                                <p class="info-purple border-radius-purple-reght">Ações</p>
+                                <div id="info-content3">
+                                    <!-- <div class="info-white dflex ">
+                                        <img onclick="editarMentor()" src="../../svg/editar.svg" alt="">
+                                        <img src="../../svg/delete.svg" alt="">
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -35,17 +35,12 @@ formulario.addEventListener('submit', (event) => {
     }
    editarMentores(mentores)
 
-
-
 })
 
 // Injeto os dados do livro no formulario, com dados do json
 const carregarDadosFormulario = async (mentores) => {
     document.getElementById('nome').value = mentores.mentor
     document.getElementById('email').value = mentores.email
-
-
-
 }
 
 const editarMentores = async (mentores) => {
