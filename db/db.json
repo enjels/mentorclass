@@ -81,6 +81,18 @@
       "encontros": "1",
       "link": "https://www.youtube.com/results?search_query=lofi+estudo",
       "id": 1
+    },
+    {
+      "turma": "turma2",
+      "mentor": "marcos",
+      "mentoria": "ajuda java script ",
+      "datadeinicio": "2023-07-06",
+      "diadasemana": "Terça-feira",
+      "horarioinicio": "18:46",
+      "horariofim": "14:49",
+      "encontros": "2",
+      "link": "https://www.youtube.com/results?search_query=lofi+estudo",
+      "id": 2
     }
   ],
   "alunos": [
