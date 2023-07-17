@@ -33,8 +33,8 @@ const getIdUrl = () => {
 
 const buscartitulomentorias = async () => {
    const resposta = await fetch(`http://localhost:3000/mentorias/${mentoriasId}`)
-    const titulomentorias = await resposta.json()
-    return titulomentorias
+    const mentorias = await resposta.json()
+    return mentorias
 }
 
 const editarMetoria = async (mentorias) => {
@@ -107,10 +107,6 @@ event.preventDefault()
 
 })
 carregarDados()
-
-
-
-
 
 
 

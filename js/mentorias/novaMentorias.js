@@ -1,6 +1,6 @@
 const formulario = document.getElementById('formulario')
 
-const buscarMentorias = async (id)=> {
+const buscarMentor = async (id)=> {
     const resposta = await fetch(`http://localhost:3000/mentores/${id}`)
     const mentor = await resposta.json()
     return mentor
@@ -26,14 +26,14 @@ const carregarSelect = async ()=> {
 }
 carregarSelect()
 
-const novaMetoria = async (titulomentorias) => {
+const novaMetoria = async (mentorias) => {
     await fetch('http://localhost:3000/mentorias',{
         method: 'POST',
         headers: {
             "Accept": 'application/json, text/plain, */*',
             "Content-Type": 'application/json'
         },
-        body: JSON.stringify(titulomentorias)
+        body: JSON.stringify(mentorias)
     })
     window.location = "./mentorias.html"
 }
@@ -45,14 +45,14 @@ event.preventDefault()
     const mentor = formulario.elements['mentor'].value
     const checkbox = formulario.elements['chk'].checked
 
-    const mentorObjeto = await buscarMentorias(mentor)
-    const titulomentorias = {
+    const mentorObjeto = await buscarMentor(mentor)
+    const mentorias = {
         mentoria,
         mentor: mentorObjeto.mentor,
         checkbox
     }
 
-    novaMetoria(titulomentorias)
+    novaMetoria(mentorias)
 
 })
 

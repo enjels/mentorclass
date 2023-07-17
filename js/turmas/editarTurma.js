@@ -1,4 +1,5 @@
 const formulario = document.getElementById('formulario')
+let turmasId = null
 const buscarMentoria = async (id) => {
     const response = await fetch(`http://localhost:3000/mentorias/${id}`)
     const mentoria = response.json()
@@ -22,7 +23,6 @@ const carregarSelectMentoria = async ()=> {
     mentoriaSelect.options.add(opcao)
     });
 }
-carregarSelectMentoria()
 
 
 const buscarMentor = async (id)=> {
@@ -49,7 +49,7 @@ const carregarSelectMentores = async ()=> {
     mentorSelect.options.add(opcao)
     });
 }
-carregarSelectMentores()
+
 
 const buscarSemana = async (id) => {
     const response = await fetch(`http://localhost:3000/semanas/${id}`)
@@ -74,11 +74,23 @@ const carregarSelectDiasDaSemana = async ()=> {
     semanaSelect.options.add(opcao)
     });
 }
-carregarSelectDiasDaSemana()
 
-const novaTurma = async (turmas) => {
-    await fetch('http://localhost:3000/turmas',{
-        method: 'POST',
+
+const getIdUrl = () => {
+    const paramsString = window.location.search
+    const params = new URLSearchParams(paramsString)
+    turmasId = params.get('id')
+ }
+
+ const buscarTurmas = async () => {
+    const resposta = await fetch(`http://localhost:3000/turmas/${turmasId}`)
+     const turmas = await resposta.json()
+     return turmas
+ }
+
+const editarTurma = async (turmas) => {
+    await fetch(`http://localhost:3000/turmas/${turmasId}`,{
+        method: 'PUT',
         headers: {
             "Accept": 'application/json, text/plain, */*',
             "Content-Type": 'application/json'
@@ -87,6 +99,19 @@ const novaTurma = async (turmas) => {
     })
    window.location = "/html/turmas/turmas.html"
 }
+
+const carregarDadosFormulario = async (turmas) => {
+    document.getElementById('turma').value = turmas.turma
+    document.getElementById('mentor').value = turmas.mentor
+    document.getElementById('mentoria').value = turmas.mentoria
+    document.getElementById('data-de-inicio').value = turmas.datadeinicio
+    document.getElementById('dia-da-semana').value = turmas.diadasemana
+    document.getElementById('start-time').value = turmas.horarioinicio
+    document.getElementById('end-time').value = turmas.horariofim
+    document.getElementById('encontro').value = turmas.encontros
+    document.getElementById('link-aula').value = turmas.link
+}
+
 formulario.addEventListener('submit',async (event) => {
 event.preventDefault()
 
@@ -114,9 +139,21 @@ event.preventDefault()
         encontros,
         link
     }
-    novaTurma(turmas)
-    
+    editarTurma(turmas)
+
 })
+
+const carregarDados = async () => {
+    getIdUrl()
+
+    await carregarSelectMentoria()
+    await carregarSelectMentores()
+    await carregarSelectDiasDaSemana()
+
+    const turmas = await buscarTurmas()
+    carregarDadosFormulario(turmas)
+}
+carregarDados()
 
 //funções menu/navegar
 const mentores = () => {

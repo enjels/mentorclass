@@ -1,78 +1,86 @@
 {
   "mentores": [
     {
-      "mentor": "marcos",
-      "email": "masrcos@gmail.com",
+      "mentor": "maria",
+      "email": "maria@gmail.com",
       "id": 1
     },
     {
-      "mentor": "detergentemmm",
-      "email": "duda@gmail.commmm",
+      "mentor": "marcos",
+      "email": "marcos@gmail.com",
       "id": 2
     },
     {
-      "mentor": "virgilio conceição cesarsdasdasd",
-      "email": "enjels@outlook.comssdasdasd",
+      "mentor": "jose",
+      "email": "jose@gmail.com",
       "id": 3
     },
     {
-      "mentor": "s",
-      "email": "s@gmail.com",
+      "mentor": "vinicius",
+      "email": "vinicius@gmail.com",
       "id": 4
     }
   ],
   "mentorias": [
     {
-      "mentoria": "ajuda js",
-      "mentor": "marcos",
-      "checkbox": false,
+      "mentoria": "ajuda em casa",
+      "mentor": "jose",
+      "checkbox": true,
       "id": 1
     },
     {
-      "mentoria": "ajuda php",
-      "mentor": "marcos",
-      "checkbox": false,
+      "mentoria": "casa ta quebrada",
+      "mentor": "vinicius",
+      "checkbox": true,
       "id": 2
     },
     {
-      "mentoria": "virgílio",
-      "mentor": "detergentemmm",
-      "checkbox": true,
+      "mentoria": "ajuda java script ",
+      "mentor": "marcos",
+      "checkbox": false,
       "id": 3
+    },
+    {
+      "mentoria": "ajuda marcos",
+      "mentor": "maria",
+      "checkbox": false,
+      "id": 4
     }
   ],
-  "diasdasemana": [
+  "semanas": [
     {
-      "segunda": "Segunda-feira",
-      "terca": "Terça-feira",
-      "quarta": "Quarta-feira",
-      "quinta": "Quinta-feira",
-      "sexta": "Sexta-feira",
+      "semana": "Segunda-feira",
+      "id": 1
+    },
+    {
+      "semana": "Terça-feira",
       "id": 2
+    },
+    {
+      "semana": "Quarta-feira",
+      "id": 3
+    },
+    {
+      "semana": "Quinta-feira",
+      "id": 4
+    },
+    {
+      "semana": "Sexta-feira",
+      "id": 5
     }
   ],
   "turmas": [
     {
-      "turma": "turma 05",
-      "mentor": "jose",
-      "mentoria": "ajuste e reparo ",
-      "datadeinicio": "10/02/2023",
-      "diadasemana": "segunda-feira",
-      "horarioinicio": "18:00",
-      "horariofim": "19:00",
-      "encontros": "0/10",
+      "turma": "turma1",
+      "mentor": "maria",
+      "mentoria": "ajuda em casa",
+      "datadeinicio": "2023-07-17",
+      "diadasemana": "Segunda-feira",
+      "horarioinicio": "14:20",
+      "horariofim": "15:21",
+      "encontros": "1",
+      "link": "https://www.youtube.com/results?search_query=lofi+estudo",
       "id": 1
-    },
-    {
-      "turma": "turma 06",
-      "mentor": "jose",
-      "mentoria": "gerenciamento global ",
-      "datadeinicio": "10/02/2023",
-      "diadasemana": "terça-feira",
-      "horarioinicio": "19:00",
-      "horariofim": "20:00",
-      "encontros": "1/10",
-      "id": 2
     }
   ],
   "alunos": [
@@ -85,7 +93,7 @@
     {
       "aluno": "Carlos Eduardo",
       "email": "carlos@outlook.com",
-      "turma": "",
+      "turma": "teste2",
       "id": 2
     }
   ]

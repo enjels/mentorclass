@@ -19,7 +19,7 @@ const rendermentor = (turmas) => {
       corlist = 'cinza100'
     }
 
-    info_content_1.innerHTML += `<p class="info-white ${corlist}">${turmas.turma}</p>`
+    let casa = info_content_1.innerHTML += `<p class="info-white ${corlist}">${turmas.turma}</p>`
 
     info_content_2.innerHTML += `<p class="info-white ${corlist}">${turmas.mentor}</p>`
 
@@ -31,7 +31,7 @@ const rendermentor = (turmas) => {
 
     info_content_6.innerHTML += `<p class="info-white ${corlist}">${turmas.horarioinicio}h-${turmas.horariofim}h</p>`
 
-    info_content_7.innerHTML += `<p class="info-white ${corlist}">${turmas.encontros}</p>`
+    info_content_7.innerHTML += `<p class="info-white ${corlist}">${turmas.encontros}/10</p>`
 
     info_content_8.innerHTML += `
           <div class="info-white dflex ${corlist}">
