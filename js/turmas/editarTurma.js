@@ -17,6 +17,9 @@ const carregarSelectMentoria = async () => {
   const mentorias = await buscarMentorias();
   const mentoriaSelect = document.getElementById('mentoria');
 
+  const opcaoVazia = new Option('Selecione uma mentoria...')
+    mentoriaSelect.options.add(opcaoVazia)
+
   mentorias.forEach((mentoria) => {
     const opcao = new Option(mentoria.mentoria, mentoria.id);
     mentoriaSelect.options.add(opcao);
@@ -38,6 +41,9 @@ const buscarMentores = async () => {
 const carregarSelectMentores = async () => {
   const mentores = await buscarMentores();
   const mentorSelect = document.getElementById('mentor');
+
+  const opcaoVazia = new Option('Selecione um mentor...')
+    mentorSelect.options.add(opcaoVazia)
 
   mentores.forEach((mentor) => {
     const opcao = new Option(mentor.mentor, mentor.id);
@@ -61,6 +67,8 @@ const carregarSelectDiasDaSemana = async () => {
   const semanas = await buscarSemanas();
   const semanaSelect = document.getElementById('dia-da-semana');
 
+  const opcaoVazia = new Option('Selecione um dia da semana ...')
+    semanaSelect.options.add(opcaoVazia)
 
   semanas.forEach((semana) => {
     const opcao = new Option(semana.semana, semana.id);
