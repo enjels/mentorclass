@@ -1,50 +1,33 @@
 {
   "mentores": [
     {
-      "mentor": "maria",
-      "email": "maria@gmail.com",
+      "mentor": "virgílio",
+      "email": "virgilio@gmail.com",
       "id": 1
     },
     {
-      "mentor": "marcos",
-      "email": "marcos@gmail.com",
+      "mentor": "richard",
+      "email": "richard@gmail.com",
       "id": 2
     },
     {
-      "mentor": "jose",
-      "email": "jose@gmail.com",
+      "mentor": "leozinho",
+      "email": "leozinho@gmail.com",
       "id": 3
-    },
-    {
-      "mentor": "vinicius",
-      "email": "vinicius@gmail.com",
-      "id": 4
     }
   ],
   "mentorias": [
     {
-      "mentoria": "ajuda em casa",
-      "mentor": "jose",
+      "mentoria": "ajuda com js",
+      "mentor": "richard",
       "checkbox": true,
       "id": 1
     },
     {
-      "mentoria": "casa ta quebrada",
-      "mentor": "vinicius",
-      "checkbox": true,
+      "mentoria": "cracudo do vava",
+      "mentor": "leozinho",
+      "checkbox": false,
       "id": 2
-    },
-    {
-      "mentoria": "ajuda java script ",
-      "mentor": "marcos",
-      "checkbox": false,
-      "id": 3
-    },
-    {
-      "mentoria": "ajuda marcos",
-      "mentor": "maria",
-      "checkbox": false,
-      "id": 4
     }
   ],
   "semanas": [
@@ -72,41 +55,35 @@
   "turmas": [
     {
       "turma": "turma1",
-      "mentor": "maria",
-      "mentoria": "ajuda em casa",
+      "mentor": "richard",
+      "mentoria": "ajuda com js",
       "datadeinicio": "2023-07-17",
       "diadasemana": "Segunda-feira",
-      "horarioinicio": "14:20",
-      "horariofim": "15:21",
+      "horarioinicio": "08:00",
+      "horariofim": "16:09",
       "encontros": "1",
-      "link": "https://www.youtube.com/results?search_query=lofi+estudo",
+      "link": "https://pt.aliexpress.com/item/1005004504834285.html?spm=a2g0o.productlist.main.39.4b2dce1dvERvmE&algo_pvid=e8ccc3bc-e623-40ad-be7c-94078f8697ac&algo_exp_id=e8ccc3bc-e623-40ad-be7c-94078f8697ac-19&pdp_npi=3%40dis%21BRL%211063.3%21674.63%21%21%21%21%21%40211bc2a016881719188748814d0760%2112000029396771219%21sea%21BR%210&curPageLogUid=YJlTX41GYJNj",
       "id": 1
     },
     {
       "turma": "turma2",
-      "mentor": "marcos",
-      "mentoria": "ajuda java script ",
-      "datadeinicio": "2023-07-06",
-      "diadasemana": "Terça-feira",
-      "horarioinicio": "18:46",
-      "horariofim": "14:49",
-      "encontros": "2",
-      "link": "https://www.youtube.com/results?search_query=lofi+estudo",
+      "mentor": "virgílio",
+      "mentoria": "cracudo do vava",
+      "datadeinicio": "2023-07-05",
+      "diadasemana": "Segunda-feira",
+      "horarioinicio": "16:20",
+      "horariofim": "17:21",
+      "encontros": "7",
+      "link": "https://pt.aliexpress.com/item/1005004504834285.html?spm=a2g0o.productlist.main.39.4b2dce1dvERvmE&algo_pvid=e8ccc3bc-e623-40ad-be7c-94078f8697ac&algo_exp_id=e8ccc3bc-e623-40ad-be7c-94078f8697ac-19&pdp_npi=3%40dis%21BRL%211063.3%21674.63%21%21%21%21%21%40211bc2a016881719188748814d0760%2112000029396771219%21sea%21BR%210&curPageLogUid=YJlTX41GYJNj",
       "id": 2
     }
   ],
   "alunos": [
     {
-      "aluno": "juliana Amaral",
-      "email": "juliana@gmail.com",
-      "turma": "teste1",
+      "aluno": "virgílio",
+      "email": "desenvolvedor199759@gmail.com",
+      "turma": "",
       "id": 1
-    },
-    {
-      "aluno": "Carlos Eduardo",
-      "email": "carlos@outlook.com",
-      "turma": "teste2",
-      "id": 2
     }
   ]
 }

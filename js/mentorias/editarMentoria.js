@@ -48,7 +48,7 @@ const editarMetoria = async (mentorias) => {
     })
     window.location = "../mentorias/mentorias.html"
 }
-carregarDadosFormulario = async (mentorias) => {
+const carregarDadosFormulario = async (mentorias) => {
    document.getElementById('nome').value = mentorias.mentoria
    document.getElementById('mentor').value = mentorias.mentor
    document.getElementById('chk').cheked = mentorias.checkbox
