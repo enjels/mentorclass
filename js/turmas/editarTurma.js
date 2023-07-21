@@ -50,6 +50,7 @@ const carregarSelectMentores = async () => {
     mentorSelect.options.add(opcao);
   });
 };
+console.log(document.getElementById('mentor').selectedIndex);
 
 const buscarSemana = async (id) => {
   const response = await fetch(`http://localhost:3000/semanas/${id}`);

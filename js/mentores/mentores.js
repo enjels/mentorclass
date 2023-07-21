@@ -34,23 +34,31 @@ const btnPurpleMenu = () => {
   const purpleBTN =document.getElementById('mentores')
     purpleBTN.classList.toggle("btnstatic-purple")
 }
+btnPurpleMenu()
+
 
  //recebe os dados da api
-const getmentores = async () => {
+const getmentores = async (textoPesquisa = null) => {
+  let texto = ''
 
-    const retorno = await fetch ('http://localhost:3000/mentores')
+  if (textoPesquisa){
+    texto = `?q=${textoPesquisa}`
+  }
+    const retorno = await fetch (`http://localhost:3000/mentores${texto}`)
     const mentores = await retorno.json()
 
     rendermentor(mentores)
-    btnPurpleMenu()
 }
 
-
+const pesquisa = document.getElementById('pesquisa')
+pesquisa.addEventListener('keyup', (e) =>{
+  if(e.key === 'Enter'){
+    const texto = pesquisa.value
+    getmentores(texto)
+  }
+})
 getmentores()
-//retorna ao login
-const voltar = () => {
-    window.location = "../../index.html"
-}
+
 //retorna a pag novoMentor
 const novoMentor = () => {
     window.location = "novoMentor.html"
@@ -78,8 +86,4 @@ const turmas = () => {
 //vai para pagina alunos
 const alunos = () => {
    window.location = "/html/alunos/alunos.html"
-}
-//vai apra pagina nova mentoria
-const novaMentoria = () => {
-   window.location = "/html/mentorias/novaMentoria.html"
 }
