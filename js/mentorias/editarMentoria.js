@@ -50,7 +50,7 @@ const editarMetoria = async (mentorias) => {
 }
 const carregarDadosFormulario = async (mentorias) => {
    document.getElementById('nome').value = mentorias.mentoria
-   document.getElementById('mentor').value = mentorias.mentor
+   document.getElementById('mentor').option.value = mentorias.mentor
    document.getElementById('chk').cheked = mentorias.checkbox
    const content_chk = document.getElementById('content-chk')
    if (mentorias.checkbox == true) {

@@ -9,14 +9,22 @@ const rendermentor = (turmas) => {
   const info_content_7 = document.getElementById('info-content7')
   const info_content_8 = document.getElementById('info-content8')
 
-  let contador = 1
+  let contador = 0
+  info_content_1.innerHTML = ''
+  info_content_2.innerHTML = ''
+  info_content_3.innerHTML = ''
+  info_content_4.innerHTML = ''
+  info_content_5.innerHTML = ''
+  info_content_6.innerHTML = ''
+  info_content_7.innerHTML = ''
+  info_content_8.innerHTML = ''
   turmas.forEach(turmas => {
     contador++;
     let corlist = '';
     if (contador % 2 === 0) {
-      corlist = 'cinza50';
-    } else {
       corlist = 'cinza100'
+    } else {
+      corlist = 'cinza50'
     }
 
     let casa = info_content_1.innerHTML += `<p class="info-white ${corlist}">${turmas.turma}</p>`
@@ -46,19 +54,38 @@ const btnPurpleMenu = () => {
   const purpleBTN = document.getElementById('turmas')
   purpleBTN.classList.toggle("btnstatic-purple")
 }
-
+btnPurpleMenu()
 
 //recebe os dados da api
-const getmentores = async () => {
+const getTurmas = async (textoPesquisa = null) => {
+  let pesquisa = ''
 
-  const retorno = await fetch('http://localhost:3000/turmas')
+  if (textoPesquisa){
+    pesquisa = `?q=${textoPesquisa}`
+  }
+
+  const retorno = await fetch(`http://localhost:3000/turmas${pesquisa}`)
   const titulomentorias = await retorno.json()
 
   rendermentor(titulomentorias)
-  btnPurpleMenu()
-}
 
-getmentores()
+}
+getTurmas()
+
+const search = document.getElementById('search')
+search.addEventListener('keyup', (e) =>{
+  if(e.key === 'Enter'){
+    const pesquisa = search.value
+    getTurmas(pesquisa)
+  }
+})
+const lupa = document.getElementById('lupa')
+lupa.addEventListener("click", (e) =>{
+  const pesquisa = search.value
+    getTurmas(pesquisa)
+})
+
+getTurmas()
 
 //retorna para pagina novoMentor
 const novaTurma = () => {

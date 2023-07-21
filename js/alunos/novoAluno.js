@@ -1,5 +1,31 @@
 const formulario = document.getElementById('formulario')
 
+const buscarTurma = async(id) => {
+    const resposta = await fetch(`http://localhost:3000/turmas/${id}`)
+    const turma = resposta.json()
+    return turma
+}
+
+const buscarTurmas = async() => {
+    const reposta = await fetch(`http://localhost:3000/turmas`)
+    const turmas = reposta.json()
+    return turmas
+}
+
+const carregarSelect = async ()=> {
+    const turmas = await buscarTurmas()
+    const turmasSelect = document.getElementById('turma')
+
+    const opcaoVazia = new Option('Selecione um mentor...')
+    turmasSelect.options.add(opcaoVazia)
+
+    turmas.forEach(turmas => {
+    const opcao = new Option(turmas.turma, turmas.id)
+    turmasSelect.options.add(opcao)
+    });
+}
+carregarSelect()
+
 const novoAluno = async (alunos) => {
     await fetch('http://localhost:3000/alunos',{
         method: 'POST',
@@ -18,11 +44,11 @@ formulario.addEventListener('submit', async (event) => {
     const aluno = formulario.elements['nome'].value
     const email = formulario.elements['email'].value
     const turma = formulario.elements['turma'].value
-
+    const turmaObjeto = await buscarTurma(turma)
     const alunos = {
     aluno,
     email,
-    turma
+    turma: turmaObjeto.turma
 }
     novoAluno(alunos)
 

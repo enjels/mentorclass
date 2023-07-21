@@ -19,16 +19,28 @@ const buscarAluno = async () => {
     return alunos
 }
 
+const buscarTurma = async(id) => {
+    const resposta = await fetch(`http://localhost:3000/turmas/${id}`)
+    const turma = resposta.json()
+    return turma
+}
+
+const buscarTurmas = async() => {
+    const reposta = await fetch(`http://localhost:3000/turmas`)
+    const turmas = reposta.json()
+    return turmas
+}
+
 const carregarSelect = async ()=> {
-    const alunos = await buscarAluno()
-    const alunoSelect = document.getElementById('turma')
+    const turmas = await buscarTurmas()
+    const turmasSelect = document.getElementById('turma')
 
-    const opcaoVazia = new Option('Selecione um aluno...')
-    alunoSelect.options.add(opcaoVazia)
+    const opcaoVazia = new Option('Selecione um mentor...')
+    turmasSelect.options.add(opcaoVazia)
 
-    alunos.forEach(alunos => {
-    const opcao = new Option(alunos.turma, alunos.id)
-    alunoSelect.options.add(opcao)
+    turmas.forEach(turmas => {
+    const opcao = new Option(turmas.turma, turmas.id)
+    turmasSelect.options.add(opcao)
     });
 }
 carregarSelect()
@@ -39,11 +51,11 @@ formulario.addEventListener('submit', async (event) => {
     const aluno = formulario.elements['nome'].value
     const email = formulario.elements['email'].value
     const turma = formulario.elements['turma'].value
-
+    const turmaObjeto = await buscarTurma(turma)
     const alunos = {
     aluno,
     email,
-    turma
+    turma: turmaObjeto.turma
 }
     editarAlunos(alunos)
 
@@ -53,7 +65,7 @@ formulario.addEventListener('submit', async (event) => {
 const carregarDadosFormulario = async (alunos) => {
     document.getElementById('nome').value = alunos.aluno
     document.getElementById('email').value = alunos.email
-    document.getElementById('turma').value = alunos.email
+    document.getElementById('turma').options.value = alunos.email
 }
 
 const editarAlunos = async (alunos) => {

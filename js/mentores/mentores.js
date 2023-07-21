@@ -5,14 +5,18 @@ const info_content_1 = document.getElementById('info-content1')
 const info_content_2 = document.getElementById('info-content2')
 const info_content_3 = document.getElementById('info-content3')
 
-let contador = 1
+let contador = 0
+  info_content_1.innerHTML = ''
+  info_content_2.innerHTML = ''
+  info_content_3.innerHTML = ''
+
 mentores.forEach(mentores => {
     contador++;
     let corlist = '';
     if (contador % 2 === 0) {
-      corlist = 'cinza50';
+      corlist = 'cinza100'
     }else{
-        corlist = 'cinza100'
+        corlist = 'cinza50'
     }
 
     info_content_1.innerHTML += `
@@ -39,25 +43,32 @@ btnPurpleMenu()
 
  //recebe os dados da api
 const getmentores = async (textoPesquisa = null) => {
-  let texto = ''
+  let pesquisa = ''
 
   if (textoPesquisa){
-    texto = `?q=${textoPesquisa}`
+    pesquisa = `?q=${textoPesquisa}`
   }
-    const retorno = await fetch (`http://localhost:3000/mentores${texto}`)
+
+    const retorno = await fetch (`http://localhost:3000/mentores${pesquisa}`)
     const mentores = await retorno.json()
 
     rendermentor(mentores)
 }
+getmentores()
 
-const pesquisa = document.getElementById('pesquisa')
-pesquisa.addEventListener('keyup', (e) =>{
+const search = document.getElementById('search')
+search.addEventListener('keyup', (e) =>{
   if(e.key === 'Enter'){
-    const texto = pesquisa.value
-    getmentores(texto)
+    const pesquisa = search.value
+    getmentores(pesquisa)
   }
 })
-getmentores()
+const lupa = document.getElementById('lupa')
+lupa.addEventListener("click", (e) =>{
+  const pesquisa = search.value
+    getmentores(pesquisa)
+})
+
 
 //retorna a pag novoMentor
 const novoMentor = () => {

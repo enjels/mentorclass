@@ -7,13 +7,17 @@ const rendermentor = (mentorias) => {
   const info_content_4 = document.getElementById('info-content4')
 
   let contador = 1
+    info_content_1.innerHTML = ''
+    info_content_2.innerHTML = ''
+    info_content_3.innerHTML = ''
+    info_content_4.innerHTML = ''
   mentorias.forEach(mentorias => {
     contador++;
     let corlist = '';
     if (contador % 2 === 0) {
-      corlist = 'cinza50';
-    } else {
       corlist = 'cinza100'
+    } else {
+      corlist = 'cinza50'
     }
 
     info_content_1.innerHTML += `
@@ -42,18 +46,35 @@ const btnPurpleMenu = () => {
   const purpleBTN = document.getElementById('mentorias')
   purpleBTN.classList.toggle("btnstatic-purple")
 }
-
+btnPurpleMenu()
 
 //recebe os dados da api
-const getmentores = async () => {
+const getmentorias = async (textoPesquisa = null) => {
+  let pesquisa = ''
+  if (textoPesquisa){
+    pesquisa = `?q=${textoPesquisa}`
+  }
 
-  const retorno = await fetch('http://localhost:3000/mentorias')
+  const retorno = await fetch(`http://localhost:3000/mentorias${pesquisa}`)
   const titulomentorias = await retorno.json()
 
   rendermentor(titulomentorias)
-  btnPurpleMenu()
-}
 
+}
+getmentorias()
+
+const search = document.getElementById('search')
+search.addEventListener('keyup', (e) =>{
+  if(e.key === 'Enter'){
+    const pesquisa = search.value
+    getmentorias(pesquisa)
+  }
+})
+const lupa = document.getElementById('lupa')
+lupa.addEventListener("click", (e) =>{
+  const pesquisa = search.value
+    getmentorias(pesquisa)
+})
 
 //retorna a pag novoMentor
 const novoMentoria = () => {
@@ -70,7 +91,7 @@ const deletarMentoria = async (id) => {
   })
 }
 
-getmentores()
+
 
 
 const btnPurple = () => {
