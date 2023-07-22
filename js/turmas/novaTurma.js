@@ -1,11 +1,11 @@
 const formulario = document.getElementById('formulario')
 const buscarMentoria = async (id) => {
-    const response = await fetch(`http://localhost:3000/mentorias/${id}`)
+    const response = await fetch(`https://api-projeto-de-conclusao-do-modulo-1.onrender.com/mentorias/${id}`)
     const mentoria = response.json()
     return mentoria
 }
 const buscarMentorias = async () =>{
-    const response = await fetch(`http://localhost:3000/mentorias/`)
+    const response = await fetch(`https://api-projeto-de-conclusao-do-modulo-1.onrender.com/mentorias/`)
     const mentorias = response.json()
     return mentorias
 }
@@ -26,13 +26,13 @@ carregarSelectMentoria()
 
 
 const buscarMentor = async (id)=> {
-    const resposta = await fetch(`http://localhost:3000/mentores/${id}`)
+    const resposta = await fetch(`https://api-projeto-de-conclusao-do-modulo-1.onrender.com/mentores/${id}`)
     const mentor = await resposta.json()
     return mentor
 }
 
 const buscarMentores = async ()=> {
-    const resposta = await fetch(`http://localhost:3000/mentores`)
+    const resposta = await fetch(`https://api-projeto-de-conclusao-do-modulo-1.onrender.com/mentores`)
     const mentores = await resposta.json()
     return mentores
 }
@@ -52,13 +52,13 @@ const carregarSelectMentores = async ()=> {
 carregarSelectMentores()
 
 const buscarSemana = async (id) => {
-    const response = await fetch(`http://localhost:3000/semanas/${id}`)
+    const response = await fetch(`https://api-projeto-de-conclusao-do-modulo-1.onrender.com/semanas/${id}`)
     const semanas = await response.json()
     return semanas
 
 }
 const buscarSemanas = async () => {
-    const response = await fetch('http://localhost:3000/semanas/')
+    const response = await fetch('https://api-projeto-de-conclusao-do-modulo-1.onrender.com/semanas/')
     const buscarSemanas = await response.json()
     return buscarSemanas
 }
@@ -77,7 +77,7 @@ const carregarSelectDiasDaSemana = async ()=> {
 carregarSelectDiasDaSemana()
 
 const novaTurma = async (turmas) => {
-    await fetch('http://localhost:3000/turmas',{
+    await fetch('https://api-projeto-de-conclusao-do-modulo-1.onrender.com/turmas',{
         method: 'POST',
         headers: {
             "Accept": 'application/json, text/plain, */*',

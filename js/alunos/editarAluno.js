@@ -8,25 +8,25 @@ const getIdUrl = () => {
 }
 
 const buscarAlunosid = async () => {
-    const response = await  fetch(`http://localhost:3000/alunos/${alunosId}`)
+    const response = await  fetch(`https://api-projeto-de-conclusao-do-modulo-1.onrender.com/alunos/${alunosId}`)
     const alunos = await response.json()
     return alunos
 }
 
 const buscarAluno = async () => {
-    const response = await  fetch(`http://localhost:3000/alunos`)
+    const response = await  fetch(`https://api-projeto-de-conclusao-do-modulo-1.onrender.com/alunos`)
     const alunos = await response.json()
     return alunos
 }
 
 const buscarTurma = async(id) => {
-    const resposta = await fetch(`http://localhost:3000/turmas/${id}`)
+    const resposta = await fetch(`https://api-projeto-de-conclusao-do-modulo-1.onrender.com/turmas/${id}`)
     const turma = resposta.json()
     return turma
 }
 
 const buscarTurmas = async() => {
-    const reposta = await fetch(`http://localhost:3000/turmas`)
+    const reposta = await fetch(`https://api-projeto-de-conclusao-do-modulo-1.onrender.com/turmas`)
     const turmas = reposta.json()
     return turmas
 }
@@ -69,7 +69,7 @@ const carregarDadosFormulario = async (alunos) => {
 }
 
 const editarAlunos = async (alunos) => {
-    await fetch(`http://localhost:3000/alunos/${alunosId}`, {
+    await fetch(`https://api-projeto-de-conclusao-do-modulo-1.onrender.com/alunos/${alunosId}`, {
         method: 'PUT',
         headers: {
             'Accept': 'application/json, text/plain, */*',

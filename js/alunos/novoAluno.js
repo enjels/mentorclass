@@ -1,13 +1,13 @@
 const formulario = document.getElementById('formulario')
 
 const buscarTurma = async(id) => {
-    const resposta = await fetch(`http://localhost:3000/turmas/${id}`)
+    const resposta = await fetch(`https://api-projeto-de-conclusao-do-modulo-1.onrender.com/turmas/${id}`)
     const turma = resposta.json()
     return turma
 }
 
 const buscarTurmas = async() => {
-    const reposta = await fetch(`http://localhost:3000/turmas`)
+    const reposta = await fetch(`https://api-projeto-de-conclusao-do-modulo-1.onrender.com/turmas`)
     const turmas = reposta.json()
     return turmas
 }
@@ -27,7 +27,7 @@ const carregarSelect = async ()=> {
 carregarSelect()
 
 const novoAluno = async (alunos) => {
-    await fetch('http://localhost:3000/alunos',{
+    await fetch('https://api-projeto-de-conclusao-do-modulo-1.onrender.com/alunos',{
         method: 'POST',
         headers: {
             "Accept": 'application/json, text/plain, */*',
@@ -60,7 +60,7 @@ const editarAluno = (id)=> {
 }
 
 const deletarAluno = async (id) => {
-   await  fetch(`http://localhost:3000/alunos/${id}`, {
+   await  fetch(`https://api-projeto-de-conclusao-do-modulo-1.onrender.com/alunos/${id}`, {
         method: 'DELETE'
     })
 }

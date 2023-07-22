@@ -16,7 +16,7 @@ const getIdUrl = () => {
 // recuperar mentor
 const buscarMentores = async () => {
     // Dou um fetch na url do json-server enviando o id dos mentores
-    const response= await fetch(`http://localhost:3000/mentores/${mentoresId}`)
+    const response= await fetch(`https://api-projeto-de-conclusao-do-modulo-1.onrender.com/mentores/${mentoresId}`)
     const mentores = await response.json()
     return mentores
 }
@@ -44,7 +44,7 @@ const carregarDadosFormulario = async (mentores) => {
 }
 
 const editarMentores = async (mentores) => {
-    await fetch(`http://localhost:3000/mentores/${mentoresId}`, {
+    await fetch(`https://api-projeto-de-conclusao-do-modulo-1.onrender.com/mentores/${mentoresId}`, {
         method: 'PUT',
         headers: {
             'Accept': 'application/json, text/plain, */*',

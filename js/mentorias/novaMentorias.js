@@ -1,13 +1,13 @@
 const formulario = document.getElementById('formulario')
 
 const buscarMentor = async (id)=> {
-    const resposta = await fetch(`http://localhost:3000/mentores/${id}`)
+    const resposta = await fetch(`https://api-projeto-de-conclusao-do-modulo-1.onrender.com/mentores/${id}`)
     const mentor = await resposta.json()
     return mentor
 }
 
 const buscarMentores = async ()=> {
-    const resposta = await fetch(`http://localhost:3000/mentores`)
+    const resposta = await fetch(`https://api-projeto-de-conclusao-do-modulo-1.onrender.com/mentores`)
     const mentores = await resposta.json()
     return mentores
 }
@@ -27,7 +27,7 @@ const carregarSelect = async ()=> {
 carregarSelect()
 
 const novaMetoria = async (mentorias) => {
-    await fetch('http://localhost:3000/mentorias',{
+    await fetch('https://api-projeto-de-conclusao-do-modulo-1.onrender.com/mentorias',{
         method: 'POST',
         headers: {
             "Accept": 'application/json, text/plain, */*',

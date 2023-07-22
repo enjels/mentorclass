@@ -1,5 +1,5 @@
 const novomentor = async (mentores) => {
-    await fetch('http://localhost:3000/mentores',{
+    await fetch('https://api-projeto-de-conclusao-do-modulo-1.onrender.com/mentores',{
         method: 'POST',
         headers: {
             "Accept": 'application/json, text/plain, */*',

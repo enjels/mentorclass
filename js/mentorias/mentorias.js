@@ -55,7 +55,7 @@ const getmentorias = async (textoPesquisa = null) => {
     pesquisa = `?q=${textoPesquisa}`
   }
 
-  const retorno = await fetch(`http://localhost:3000/mentorias${pesquisa}`)
+  const retorno = await fetch(`https://api-projeto-de-conclusao-do-modulo-1.onrender.com/mentorias${pesquisa}`)
   const titulomentorias = await retorno.json()
 
   rendermentor(titulomentorias)
@@ -86,7 +86,7 @@ const editarMentoria = (id) => {
 }
 
 const deletarMentoria = async (id) => {
-  await fetch(`http://localhost:3000/mentorias/${id}`, {
+  await fetch(`https://api-projeto-de-conclusao-do-modulo-1.onrender.com/mentorias/${id}`, {
     method: 'DELETE'
   })
 }

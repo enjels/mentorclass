@@ -46,7 +46,7 @@ const getAlunos = async (textoPesquisa = null) => {
   if (textoPesquisa) {
     pesquisa = `?q=${textoPesquisa}`
   }
-  const retorno = await fetch(`http://localhost:3000/alunos${pesquisa}`)
+  const retorno = await fetch(`https://api-projeto-de-conclusao-do-modulo-1.onrender.com/alunos${pesquisa}`)
   const alunos = await retorno.json()
 
   renderAlunos(alunos)
@@ -78,7 +78,7 @@ const editarAluno = (id) => {
 }
 
 const deletarAluno = async (id) => {
-  await fetch(`http://localhost:3000/alunos/${id}`, {
+  await fetch(`https://api-projeto-de-conclusao-do-modulo-1.onrender.com/alunos/${id}`, {
     method: 'DELETE'
   })
 }

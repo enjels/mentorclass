@@ -1,13 +1,13 @@
 const formulario = document.getElementById('formulario')
 let mentoriasId = null
 const buscarMentorias = async (id)=> {
-    const resposta = await fetch(`http://localhost:3000/mentores/${id}`)
+    const resposta = await fetch(`https://api-projeto-de-conclusao-do-modulo-1.onrender.com/mentores/${id}`)
     const mentor = await resposta.json()
     return mentor
 }
 
 const buscarMentores = async ()=> {
-    const resposta = await fetch(`http://localhost:3000/mentores`)
+    const resposta = await fetch(`https://api-projeto-de-conclusao-do-modulo-1.onrender.com/mentores`)
     const mentores = await resposta.json()
     return mentores
 }
@@ -32,13 +32,13 @@ const getIdUrl = () => {
 }
 
 const buscartitulomentorias = async () => {
-   const resposta = await fetch(`http://localhost:3000/mentorias/${mentoriasId}`)
+   const resposta = await fetch(`https://api-projeto-de-conclusao-do-modulo-1.onrender.com/mentorias/${mentoriasId}`)
     const mentorias = await resposta.json()
     return mentorias
 }
 
 const editarMetoria = async (mentorias) => {
-    await fetch(`http://localhost:3000/mentorias/${mentoriasId}`,{
+    await fetch(`https://api-projeto-de-conclusao-do-modulo-1.onrender.com/mentorias/${mentoriasId}`,{
         method: 'PUT',
         headers: {
             "Accept": 'application/json, text/plain, */*',

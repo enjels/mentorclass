@@ -2,13 +2,13 @@ const formulario = document.getElementById('formulario');
 let turmasId = null;
 
 const buscarMentoria = async (id) => {
-  const response = await fetch(`http://localhost:3000/mentorias/${id}`);
+  const response = await fetch(`https://api-projeto-de-conclusao-do-modulo-1.onrender.com/mentorias/${id}`);
   const mentoria = await response.json();
   return mentoria;
 };
 
 const buscarMentorias = async () => {
-  const response = await fetch(`http://localhost:3000/mentorias/`);
+  const response = await fetch(`https://api-projeto-de-conclusao-do-modulo-1.onrender.com/mentorias/`);
   const mentorias = await response.json();
   return mentorias;
 };
@@ -27,13 +27,13 @@ const carregarSelectMentoria = async () => {
 };
 
 const buscarMentor = async (id) => {
-  const resposta = await fetch(`http://localhost:3000/mentores/${id}`);
+  const resposta = await fetch(`https://api-projeto-de-conclusao-do-modulo-1.onrender.com/mentores/${id}`);
   const mentor = await resposta.json();
   return mentor;
 };
 
 const buscarMentores = async () => {
-  const resposta = await fetch(`http://localhost:3000/mentores`);
+  const resposta = await fetch(`https://api-projeto-de-conclusao-do-modulo-1.onrender.com/mentores`);
   const mentores = await resposta.json();
   return mentores;
 };
@@ -53,13 +53,13 @@ const carregarSelectMentores = async () => {
 console.log(document.getElementById('mentor').selectedIndex);
 
 const buscarSemana = async (id) => {
-  const response = await fetch(`http://localhost:3000/semanas/${id}`);
+  const response = await fetch(`https://api-projeto-de-conclusao-do-modulo-1.onrender.com/semanas/${id}`);
   const semana = await response.json();
   return semana;
 };
 
 const buscarSemanas = async () => {
-  const response = await fetch('http://localhost:3000/semanas/');
+  const response = await fetch('https://api-projeto-de-conclusao-do-modulo-1.onrender.com/semanas/');
   const semanas = await response.json();
   return semanas;
 };
@@ -84,14 +84,14 @@ const getIdUrl = () => {
 };
 
 const buscarTurmas = async () => {
-  const resposta = await fetch(`http://localhost:3000/turmas/${turmasId}`);
+  const resposta = await fetch(`https://api-projeto-de-conclusao-do-modulo-1.onrender.com/turmas/${turmasId}`);
   const turmas = await resposta.json();
   console.log(turmas)
   return turmas;
 };
 
 const editarTurma = async (turmas) => {
-  await fetch(`http://localhost:3000/turmas/${turmasId}`, {
+  await fetch(`https://api-projeto-de-conclusao-do-modulo-1.onrender.com/turmas/${turmasId}`, {
     method: 'PUT',
     headers: {
       "Accept": 'application/json, text/plain, */*',
