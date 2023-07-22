@@ -100,6 +100,7 @@ const deletarTurma = async (id) => {
   await fetch(`https://api-projeto-de-conclusao-do-modulo-1.onrender.com/turmas/${id}`, {
     method: 'DELETE'
   })
+  getTurmas()
 }
 
 //funções menu/navegar
