@@ -89,6 +89,7 @@ const deletarMentoria = async (id) => {
   await fetch(`https://api-projeto-de-conclusao-do-modulo-1.onrender.com/mentorias/${id}`, {
     method: 'DELETE'
   })
+  getmentorias()
 }
 
 

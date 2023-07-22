@@ -85,7 +85,6 @@ lupa.addEventListener("click", (e) =>{
     getTurmas(pesquisa)
 })
 
-getTurmas()
 
 //retorna para pagina novoMentor
 const novaTurma = () => {
