@@ -70,10 +70,7 @@ lupa.addEventListener("click", (e) =>{
 })
 
 
-//retorna a pag novoMentor
-const novoMentor = () => {
-    window.location = "novoMentor.html"
-}
+
 //vai a pag editarMentor
 const editarMentor = (id)=> {
     window.location = `/html/mentores/editarmentor.html?id=${id}`
@@ -97,4 +94,8 @@ const turmas = () => {
 //vai para pagina alunos
 const alunos = () => {
    window.location = "/html/alunos/alunos.html"
+}
+//retorna a pag novoMentor
+const novoMentor = () => {
+  window.location = "/html/mentores/novoMentor.html"
 }
