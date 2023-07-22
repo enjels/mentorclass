@@ -74,7 +74,7 @@ const novoAluno = () => {
 }
 //vai a pag editarMentor
 const editarAluno = (id) => {
-  window.location = `/html/alunos/editaraluno.html?id=${id}`
+  window.location = `/html/alunos/editarAluno.html?id=${id}`
 }
 
 const deletarAluno = async (id) => {
