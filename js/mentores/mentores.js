@@ -73,7 +73,7 @@ lupa.addEventListener("click", (e) =>{
 
 //vai a pag editarMentor
 const editarMentor = (id)=> {
-    window.location = `/html/mentores/editarmentor.html?id=${id}`
+    window.location = `/html/mentores/editarMentor.html?id=${id}`
 }
 
 const deletarMentor = async (id) => {
