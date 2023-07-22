@@ -81,6 +81,7 @@ const deletarAluno = async (id) => {
   await fetch(`https://api-projeto-de-conclusao-do-modulo-1.onrender.com/alunos/${id}`, {
     method: 'DELETE'
   })
+  getAlunos()
 }
 //leva a pagina mentores
 const mentores = () => {
